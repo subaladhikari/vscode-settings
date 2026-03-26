@@ -1,2 +1,4 @@
-# vscode-settings
-My VS Code settings and extensions
+<samp><b>VS Code Settings & Extensions</b></samp>
+
+[`.vscode/settings.json`](./.vscode/settings.json)<br>
+[`.vscode/global.code-snippets`](./.vscode/global.code-snippets)
