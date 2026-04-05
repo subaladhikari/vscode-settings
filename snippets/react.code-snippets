@@ -1,0 +1,1051 @@
+{
+  //Directive SNIPPETS
+  "Use Client Directive": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "useclient",
+    "body": [
+      "'use client';",
+      "",
+      "$0"
+    ],
+    "description": "Add 'use client' directive at the top of the file"
+  },
+  "Use Server Directive": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "useserver",
+    "body": [
+      "'use server';",
+      "",
+      "$0"
+    ],
+    "description": "Add 'use server' directive for Server Actions or Server Components"
+  },
+  "Use Strict Directive": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "usestrict",
+    "body": [
+      "'use strict';",
+      "",
+      "$0"
+    ],
+    "description": "Add 'use strict' directive for Strict Mode in JavaScript"
+  },
+  // React Hooks Snippets
+  "useRef Hook": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "useRef",
+    "description": "useRef hook — inline",
+    "body": [
+      "const ${1:ref} = useRef<${2:HTMLDivElement}>(null);"
+    ]
+  },
+  "useEffect Hook": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "useEffect",
+    "body": ["useEffect(() => {", "  $0", "}, [${1:dependencies}]);"],
+    "description": "useEffect Hook with dependency placeholder",
+  },
+  "useEffectCleanup Hook": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "useEffectCleanup",
+    "description": "useEffect hook with cleanup — inline",
+    "body": [
+      "useEffect(() => {",
+      "\t$1",
+      "",
+      "\treturn () => {",
+      "\t\t$2",
+      "\t};",
+      "}, [$3]);"
+    ]
+  },
+  "useState Hook": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "useState",
+    "description": "useState hook — inline",
+    "body": [
+      "const [${1:state}, set${1/^(.)(.*)/${1:/upcase}$2/}] = useState<${2:string}>(${3:''});"
+    ]
+  },
+  "useCallback Hook": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "useCallback",
+    "description": "useCallback hook — inline",
+    "body": [
+      "const ${1:handleAction} = useCallback(($2) => {",
+      "\t$3",
+      "}, [$4]);"
+    ]
+  },
+  "useMemo Hook": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "useMemo",
+    "description": "useMemo hook — inline",
+    "body": [
+      "const ${1:memoizedValue} = useMemo(() => {",
+      "\treturn $2;",
+      "}, [$3]);"
+    ]
+  },
+  "useReducer Hook": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "useReducer",
+    "description": "useReducer hook — inline",
+    "body": [
+      "const [state, dispatch] = useReducer(${1:reducer}, ${2:initialState});"
+    ]
+  },
+  "useContext Hook": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "useContext",
+    "description": "useContext hook — inline",
+    "body": [
+      "const ${1:value} = useContext(${2:MyContext});"
+    ]
+  },
+  "useId Hook": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "useId",
+    "description": "useId hook — inline",
+    "body": [
+      "const id = useId();"
+    ]
+  },
+  "useTransition Hook": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "useTransition",
+    "description": "useTransition hook — inline",
+    "body": [
+      "const [isPending, startTransition] = useTransition();"
+    ]
+  },
+  "useDeferredValue Hook": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "useDeferredValue",
+    "description": "useDeferredValue hook — inline",
+    "body": [
+      "const deferred${1/(.*)/${1:/pascalcase}/} = useDeferredValue(${1:value});"
+    ]
+  },
+  "useLayoutEffect Hook": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "useLayoutEffect",
+    "description": "useLayoutEffect hook with cleanup — inline",
+    "body": [
+      "useLayoutEffect(() => {",
+      "\t$1",
+      "",
+      "\treturn () => {",
+      "\t\t$2",
+      "\t};",
+      "}, [$3]);"
+    ]
+  },
+  "useActionState Hook": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "useActionState",
+    "description": "[React 19+] useActionState hook — inline",
+    "body": [
+      "const [state, formAction, isPending] = useActionState(${1:action}, ${2:initialState});"
+    ]
+  },
+  "useOptimistic Hook": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "useOptimistic",
+    "description": "[React 19+] useOptimistic hook — inline",
+    "body": [
+      "const [${1:optimisticItems}, add${1/^(.)(.*)/${1:/upcase}$2/}] = useOptimistic(${2:items});"
+    ]
+  },
+  "useFormStatus Hook": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "useFormStatus",
+    "description": "[React 18.3+] useFormStatus hook — inline",
+    "body": [
+      "const { pending } = useFormStatus();"
+    ]
+  },
+  "useFormState Hook": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "useFormState",
+    "description": "[React 18] useFormState hook — inline",
+    "body": [
+      "const [state, formAction] = useFormState(${1:action}, ${2:initialState});"
+    ]
+  },
+  // Helpers SNIPPETS
+  "Render Method": {
+    "scope": "javascriptreact,typescriptreact",
+    "prefix": "ren",
+    "body": ["render() {", "  return (", "    $0", "  );", "}"],
+    "description": "Class component render method",
+  },
+  "setState": {
+    "scope": "javascriptreact,typescriptreact",
+    "prefix": "ss",
+    "body": ["this.setState({ ${1:key}: ${2:value} });"],
+    "description": "Standard this.setState",
+  },
+  "Functional setState": {
+    "scope": "javascriptreact,typescriptreact",
+    "prefix": "ssf",
+    "body": [
+      "this.setState((prevState) => ({",
+      "  ...prevState,",
+      "  ${1:key}: ${2:value}",
+      "}));",
+    ],
+    "description": "Functional setState with object spreading",
+  },
+  // REACT SNIPPETS
+  "Import React": {
+    "scope": "javascriptreact,typescriptreact",
+    "prefix": "imr",
+    "body": ["import React from 'react';"],
+    "description": "Import React",
+  },
+  "Import ReactDOM": {
+    "scope": "javascriptreact,typescriptreact",
+    "prefix": "imrd",
+    "body": ["import ReactDOM from 'react-dom';"],
+    "description": "Import ReactDOM",
+  },
+  "Import Component": {
+    "scope": "javascriptreact,typescriptreact",
+    "prefix": "imrc",
+    "body": ["import { Component } from 'react';"],
+    "description": "Import React Component",
+  },
+  "Import useState": {
+    "scope": "javascriptreact,typescriptreact",
+    "prefix": "imrs",
+    "body": ["import { useState } from 'react';"],
+    "description": "Import useState hook",
+  },
+  "Import useEffect": {
+    "scope": "javascriptreact,typescriptreact",
+    "prefix": "imre",
+    "body": ["import { useEffect } from 'react';"],
+    "description": "Import useEffect hook",
+  },
+  "Import useState and useEffect": {
+    "scope": "javascriptreact,typescriptreact",
+    "prefix": "imrse",
+    "body": ["import { useState, useEffect } from 'react';"],
+    "description": "Import useState and useEffect hooks",
+  },
+  "Import PropTypes": {
+    "scope": "javascriptreact,typescriptreact",
+    "prefix": "impt",
+    "body": ["import PropTypes from 'prop-types';"],
+    "description": "Import PropTypes",
+  },
+	// Component Snippets
+  "React Class Component": {
+    "scope": "javascriptreact,typescriptreact",
+    "prefix": "rce",
+    "body": [
+      "import { Component } from 'react';",
+      "",
+      "class ${1:${TM_FILENAME_BASE}} extends Component {",
+      "  render() {",
+      "    return (",
+      "      <div>",
+      "        $0",
+      "      </div>",
+      "    );",
+      "  }",
+      "}",
+    ],
+    "description": "Class component with file name",
+  },
+  "React Class Export Default": {
+    "scope": "javascriptreact,typescriptreact",
+    "prefix": "rced",
+    "body": [
+      "import { Component } from 'react';",
+      "",
+      "export default class ${1:${TM_FILENAME_BASE}} extends Component {",
+      "  render() {",
+      "    return (",
+      "      <div>",
+      "        $0",
+      "      </div>",
+      "    );",
+      "  }",
+      "}",
+    ],
+    "description": "Export default class component",
+  },
+  "React Functional Component Default Export": {
+    "scope": "javascriptreact,typescriptreact",
+    "prefix": "rfc",
+    "body": [
+      "export default function ${1:${TM_FILENAME_BASE}}() {",
+      "  return (",
+      "    <div>",
+      "      $0",
+      "    </div>",
+      "  );",
+      "}",
+    ],
+    "description": "Export default function component",
+  },
+  "React Functional Export Bottom Default Export": {
+    "scope": "javascriptreact,typescriptreact",
+    "prefix": "rfce",
+    "body": [
+      "function ${1:${TM_FILENAME_BASE}}() {",
+      "  return (",
+      "    <div>",
+      "      $0",
+      "    </div>",
+      "  );",
+      "}",
+      "",
+      "export default ${1:${TM_FILENAME_BASE}};",
+    ],
+    "description": "Function component with bottom export",
+  },
+  "React Arrow Function": {
+    "scope": "javascriptreact,typescriptreact",
+    "prefix": "rafc",
+    "body": [
+      "export const ${1:${TM_FILENAME_BASE}} = () => {",
+      "  return (",
+      "    <div>",
+      "      $0",
+      "    </div>",
+      "  );",
+      "};",
+    ],
+    "description": "Export named arrow function component",
+  },
+  "React Arrow Function Export": {
+    "scope": "javascriptreact,typescriptreact",
+    "prefix": "rafce",
+    "body": [
+      "const ${1:${TM_FILENAME_BASE}} = () => {",
+      "  return (",
+      "    <div>",
+      "      $0",
+      "    </div>",
+      "  );",
+      "};",
+      "",
+      "export default ${1:${TM_FILENAME_BASE}};",
+    ],
+    "description": "Arrow function component with bottom export",
+  },
+  "React TypeScript Arrow Function Export": {
+    "scope": "javascriptreact,typescriptreact",
+    "prefix": "rafce",
+    "description": "React TypeScript FC with Props interface",
+    "body": [
+      "interface ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}Props {",
+      "\t$2",
+      "}",
+      "",
+      "const ${1} = ({ $3 }: ${1}Props) => {",
+      "\treturn (",
+      "\t\t<div className=\"$4\">",
+      "\t\t\t<h1>${1}</h1>",
+      "\t\t</div>",
+      "\t);",
+      "};",
+      "",
+      "export default ${1};"
+    ]
+  },
+  "React Context Provider": {
+    "scope": "typescriptreact",
+    "prefix": "rcpt",
+    "body": [
+      "import { createContext } from 'react';",
+      "",
+      "type ${1:name/(.*)/${1:/capitalize}/}ContextProviderProps = {",
+      "\tchildren: React.ReactNode;",
+      "};",
+      "",
+      "type ${1:name/(.*)/${1:/capitalize}/}ContextType = {",
+      "\t$2",
+      "};",
+      "",
+      "export const ${1:name/(.*)/${1:/capitalize}/}Context = createContext({} as ${1:name/(.*)/${1:/capitalize}/}ContextType);",
+      "",
+      "export const ${1:name/(.*)/${1:/capitalize}/}ContextProvider = ({ children }: ${1:name/(.*)/${1:/capitalize}/}ContextProviderProps) => {",
+      "\treturn (",
+      "\t\t<${1:name/(.*)/${1:/capitalize}/}Context.Provider",
+      "\t\t\tvalue={{",
+      "\t\t\t\t$3",
+      "\t\t\t}}",
+      "\t\t>",
+      "\t\t\t{children}",
+      "\t\t</${1:name/(.*)/${1:/capitalize}/}Context.Provider>",
+      "\t);",
+      "};",
+    ],
+    "description": "Declare a new Context Provider with TypeScript types and PascalCase naming.",
+  },
+
+  "React TypeScript Memoized Component": {
+    "prefix": "rfcm",
+    "description": "React TypeScript FC wrapped in React.memo",
+    "body": [
+      "import { memo } from 'react';",
+      "",
+      "interface ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}Props {",
+      "\t$2",
+      "}",
+      "",
+      "const ${1} = memo(({ $3 }: ${1}Props) => {",
+      "\treturn (",
+      "\t\t<div className=\"$4\">",
+      "\t\t\t<h1>${1}</h1>",
+      "\t\t</div>",
+      "\t);",
+      "});",
+      "",
+      "export default ${1};"
+    ]
+  },
+
+  "React TypeScript FC with useState": {
+    "prefix": "rstate",
+    "description": "React TypeScript FC with useState",
+    "body": [
+      "import { useState } from 'react';",
+      "",
+      "interface ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}Props {",
+      "\t$2",
+      "}",
+      "",
+      "const ${1} = ({ $3 }: ${1}Props) => {",
+      "\tconst [${4:state}, setState] = useState<${5:string}>(${6:''});",
+      "",
+      "\treturn (",
+      "\t\t<div className=\"$7\">",
+      "\t\t\t<h1>${1}</h1>",
+      "\t\t</div>",
+      "\t);",
+      "};",
+      "",
+      "export default ${1};"
+    ]
+  },
+
+  "React TypeScript FC with useReducer": {
+    "prefix": "rreducer",
+    "description": "React TypeScript FC with useReducer",
+    "body": [
+      "import { useReducer } from 'react';",
+      "",
+      "interface ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}Props {",
+      "\t$2",
+      "}",
+      "",
+      "interface State {",
+      "\t${3:value}: ${4:string};",
+      "}",
+      "",
+      "type Action =",
+      "\t| { type: '${5:INCREMENT}' }",
+      "\t| { type: '${6:DECREMENT}' };",
+      "",
+      "const initialState: State = {",
+      "\t${3}: ${7:''},",
+      "};",
+      "",
+      "const reducer = (state: State, action: Action): State => {",
+      "\tswitch (action.type) {",
+      "\t\tcase '${5}':",
+      "\t\t\treturn state;",
+      "\t\tcase '${6}':",
+      "\t\t\treturn state;",
+      "\t\tdefault:",
+      "\t\t\treturn state;",
+      "\t}",
+      "};",
+      "",
+      "const ${1} = ({ $8 }: ${1}Props) => {",
+      "\tconst [state, dispatch] = useReducer(reducer, initialState);",
+      "",
+      "\treturn (",
+      "\t\t<div className=\"$9\">",
+      "\t\t\t<h1>${1}</h1>",
+      "\t\t</div>",
+      "\t);",
+      "};",
+      "",
+      "export default ${1};"
+    ]
+  },
+
+  "React TypeScript FC with useRef": {
+    "prefix": "rref",
+    "description": "React TypeScript FC with useRef",
+    "body": [
+      "import { useRef } from 'react';",
+      "",
+      "interface ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}Props {",
+      "\t$2",
+      "}",
+      "",
+      "const ${1} = ({ $3 }: ${1}Props) => {",
+      "\tconst ${4:ref} = useRef<${5:HTMLDivElement}>(null);",
+      "",
+      "\treturn (",
+      "\t\t<div ref={${4}} className=\"$6\">",
+      "\t\t\t<h1>${1}</h1>",
+      "\t\t</div>",
+      "\t);",
+      "};",
+      "",
+      "export default ${1};"
+    ]
+  },
+
+  "React TypeScript FC with useEffect": {
+    "prefix": "reffect",
+    "description": "React TypeScript FC with useEffect",
+    "body": [
+      "import { useEffect } from 'react';",
+      "",
+      "interface ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}Props {",
+      "\t$2",
+      "}",
+      "",
+      "const ${1} = ({ $3 }: ${1}Props) => {",
+      "\tuseEffect(() => {",
+      "\t\t$4",
+      "",
+      "\t\treturn () => {",
+      "\t\t\t$5",
+      "\t\t};",
+      "\t}, [$6]);",
+      "",
+      "\treturn (",
+      "\t\t<div className=\"$7\">",
+      "\t\t\t<h1>${1}</h1>",
+      "\t\t</div>",
+      "\t);",
+      "};",
+      "",
+      "export default ${1};"
+    ]
+  },
+
+  "React TypeScript FC with useMemo": {
+    "prefix": "rmemo",
+    "description": "React TypeScript FC with useMemo",
+    "body": [
+      "import { useMemo } from 'react';",
+      "",
+      "interface ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}Props {",
+      "\t$2",
+      "}",
+      "",
+      "const ${1} = ({ $3 }: ${1}Props) => {",
+      "\tconst ${4:memoizedValue} = useMemo(() => {",
+      "\t\treturn $5;",
+      "\t}, [$6]);",
+      "",
+      "\treturn (",
+      "\t\t<div className=\"$7\">",
+      "\t\t\t<h1>${1}</h1>",
+      "\t\t</div>",
+      "\t);",
+      "};",
+      "",
+      "export default ${1};"
+    ]
+  },
+
+  "React TypeScript FC with useCallback": {
+    "prefix": "rcb",
+    "description": "React TypeScript FC with useCallback",
+    "body": [
+      "import { useCallback } from 'react';",
+      "",
+      "interface ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}Props {",
+      "\t$2",
+      "}",
+      "",
+      "const ${1} = ({ $3 }: ${1}Props) => {",
+      "\tconst ${4:handleAction} = useCallback(($5) => {",
+      "\t\t$6",
+      "\t}, [$7]);",
+      "",
+      "\treturn (",
+      "\t\t<div className=\"$8\">",
+      "\t\t\t<h1>${1}</h1>",
+      "\t\t</div>",
+      "\t);",
+      "};",
+      "",
+      "export default ${1};"
+    ]
+  },
+
+  "React TypeScript FC with useLayoutEffect": {
+    "prefix": "rle",
+    "description": "React TypeScript FC with useLayoutEffect",
+    "body": [
+      "import { useLayoutEffect } from 'react';",
+      "",
+      "interface ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}Props {",
+      "\t$2",
+      "}",
+      "",
+      "const ${1} = ({ $3 }: ${1}Props) => {",
+      "\tuseLayoutEffect(() => {",
+      "\t\t$4",
+      "",
+      "\t\treturn () => {",
+      "\t\t\t$5",
+      "\t\t};",
+      "\t}, [$6]);",
+      "",
+      "\treturn (",
+      "\t\t<div className=\"$7\">",
+      "\t\t\t<h1>${1}</h1>",
+      "\t\t</div>",
+      "\t);",
+      "};",
+      "",
+      "export default ${1};"
+    ]
+  },
+
+  "React TypeScript FC with useId": {
+    "prefix": "rid",
+    "description": "React TypeScript FC with useId",
+    "body": [
+      "import { useId } from 'react';",
+      "",
+      "interface ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}Props {",
+      "\t$2",
+      "}",
+      "",
+      "const ${1} = ({ $3 }: ${1}Props) => {",
+      "\tconst id = useId();",
+      "",
+      "\treturn (",
+      "\t\t<div className=\"$4\">",
+      "\t\t\t<label htmlFor={id}>$5</label>",
+      "\t\t\t<input id={id} $6 />",
+      "\t\t</div>",
+      "\t);",
+      "};",
+      "",
+      "export default ${1};"
+    ]
+  },
+
+  "React TypeScript FC with useTransition": {
+    "prefix": "rtrans",
+    "description": "React TypeScript FC with useTransition",
+    "body": [
+      "import { useTransition } from 'react';",
+      "",
+      "interface ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}Props {",
+      "\t$2",
+      "}",
+      "",
+      "const ${1} = ({ $3 }: ${1}Props) => {",
+      "\tconst [isPending, startTransition] = useTransition();",
+      "",
+      "\tconst ${4:handleAction} = () => {",
+      "\t\tstartTransition(() => {",
+      "\t\t\t$5",
+      "\t\t});",
+      "\t};",
+      "",
+      "\treturn (",
+      "\t\t<div className=\"$6\">",
+      "\t\t\t<h1>${1}</h1>",
+      "\t\t\t{isPending && <span>Loading...</span>}",
+      "\t\t</div>",
+      "\t);",
+      "};",
+      "",
+      "export default ${1};"
+    ]
+  },
+
+  "React TypeScript FC with useDeferredValue": {
+    "prefix": "rdefer",
+    "description": "React TypeScript FC with useDeferredValue",
+    "body": [
+      "import { useState, useDeferredValue } from 'react';",
+      "",
+      "interface ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}Props {",
+      "\t$2",
+      "}",
+      "",
+      "const ${1} = ({ $3 }: ${1}Props) => {",
+      "\tconst [${4:value}, setState] = useState<${5:string}>('');",
+      "\tconst deferred${4/(.*)/${1:/pascalcase}/} = useDeferredValue(${4});",
+      "",
+      "\treturn (",
+      "\t\t<div className=\"$6\">",
+      "\t\t\t<h1>${1}</h1>",
+      "\t\t</div>",
+      "\t);",
+      "};",
+      "",
+      "export default ${1};"
+    ]
+  },
+
+  "React 18 useFormState": {
+    "prefix": "rformstate",
+    "description": "[React 18 / React DOM] useFormState for form actions (React 18 compatible)",
+    "body": [
+      "import { useFormState, useFormStatus } from 'react-dom';",
+      "",
+      "interface ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}Props {",
+      "\t$2",
+      "}",
+      "",
+      "interface FormState {",
+      "\t${3:error}: string | null;",
+      "}",
+      "",
+      "const ${4:${1/(.*)/${1:/camelcase}/}}Action = async (prevState: FormState, formData: FormData): Promise<FormState> => {",
+      "\ttry {",
+      "\t\t$5",
+      "\t\treturn { ${3}: null };",
+      "\t} catch (err) {",
+      "\t\treturn { ${3}: 'Something went wrong' };",
+      "\t}",
+      "};",
+      "",
+      "function SubmitButton() {",
+      "\tconst { pending } = useFormStatus();",
+      "\treturn (",
+      "\t\t<button type=\"submit\" disabled={pending}>",
+      "\t\t\t{pending ? 'Loading...' : '${6:Submit}'}",
+      "\t\t</button>",
+      "\t);",
+      "}",
+      "",
+      "const ${1} = ({ $7 }: ${1}Props) => {",
+      "\tconst [state, formAction] = useFormState(${4}Action, { ${3}: null });",
+      "",
+      "\treturn (",
+      "\t\t<form action={formAction} className=\"$8\">",
+      "\t\t\t$9",
+      "\t\t\t<SubmitButton />",
+      "\t\t\t{state.${3} && <p>{state.${3}}</p>}",
+      "\t\t</form>",
+      "\t);",
+      "};",
+      "",
+      "export default ${1};"
+    ]
+  },
+
+  "React 19 useActionState": {
+    "prefix": "raction",
+    "description": "[React 19+ only] useActionState for form actions",
+    "body": [
+      "import { useActionState } from 'react';",
+      "",
+      "interface ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}Props {",
+      "\t$2",
+      "}",
+      "",
+      "interface FormState {",
+      "\t${3:error}: string | null;",
+      "}",
+      "",
+      "const ${4:${1/(.*)/${1:/camelcase}/}}Action = async (prevState: FormState, formData: FormData): Promise<FormState> => {",
+      "\ttry {",
+      "\t\t$5",
+      "\t\treturn { ${3}: null };",
+      "\t} catch (err) {",
+      "\t\treturn { ${3}: 'Something went wrong' };",
+      "\t}",
+      "};",
+      "",
+      "const ${1} = ({ $6 }: ${1}Props) => {",
+      "\tconst [state, formAction, isPending] = useActionState(${4}Action, { ${3}: null });",
+      "",
+      "\treturn (",
+      "\t\t<form action={formAction} className=\"$7\">",
+      "\t\t\t$8",
+      "\t\t\t<button type=\"submit\" disabled={isPending}>",
+      "\t\t\t\t{isPending ? 'Loading...' : '${9:Submit}'}",
+      "\t\t\t</button>",
+      "\t\t\t{state.${3} && <p>{state.${3}}</p>}",
+      "\t\t</form>",
+      "\t);",
+      "};",
+      "",
+      "export default ${1};"
+    ]
+  },
+
+  "React 19 useOptimistic": {
+    "prefix": "roptimistic",
+    "description": "[React 19+ only] useOptimistic for optimistic UI",
+    "body": [
+      "import { useOptimistic, useTransition } from 'react';",
+      "",
+      "interface ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}Props {",
+      "\t${2:items}: ${3:string}[];",
+      "}",
+      "",
+      "const ${1} = ({ ${2} }: ${1}Props) => {",
+      "\tconst [isPending, startTransition] = useTransition();",
+      "\tconst [optimistic${2/(.*)/${1:/pascalcase}/}, addOptimistic] = useOptimistic(${2});",
+      "",
+      "\tconst handleAction = async (${4:value}: ${3}) => {",
+      "\t\tstartTransition(async () => {",
+      "\t\t\taddOptimistic([...${2}, ${4}]);",
+      "\t\t\t$5",
+      "\t\t});",
+      "\t};",
+      "",
+      "\treturn (",
+      "\t\t<div className=\"$6\">",
+      "\t\t\t<h1>${1}</h1>",
+      "\t\t</div>",
+      "\t);",
+      "};",
+      "",
+      "export default ${1};"
+    ]
+  },
+
+  "React 19 use() with Promise": {
+    "prefix": "ruse",
+    "description": "[React 19+ only] use() to read a Promise — wrap parent in Suspense",
+    "body": [
+      "import { use } from 'react';",
+      "",
+      "interface ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}Props {",
+      "\t${2:dataPromise}: Promise<${3:unknown}>;",
+      "}",
+      "",
+      "const ${1} = ({ ${2} }: ${1}Props) => {",
+      "\tconst ${4:data} = use(${2});",
+      "",
+      "\treturn (",
+      "\t\t<div className=\"$5\">",
+      "\t\t\t<h1>${1}</h1>",
+      "\t\t</div>",
+      "\t);",
+      "};",
+      "",
+      "export default ${1};"
+    ]
+  },
+
+  "React 19 useFormStatus": {
+    "prefix": "rformstatus",
+    "description": "[React 18.3+] useFormStatus — must be a child of a form element",
+    "body": [
+      "import { useFormStatus } from 'react-dom';",
+      "",
+      "const ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}} = () => {",
+      "\tconst { pending } = useFormStatus();",
+      "",
+      "\treturn (",
+      "\t\t<button type=\"submit\" disabled={pending}>",
+      "\t\t\t{pending ? '${2:Loading...}' : '${3:Submit}'}",
+      "\t\t</button>",
+      "\t);",
+      "};",
+      "",
+      "export default ${1};"
+    ]
+  },
+
+  "React 19 ref as Prop": {
+    "prefix": "rref19",
+    "description": "[React 19+ only] ref as a direct prop — no forwardRef needed",
+    "body": [
+      "import type { Ref } from 'react';",
+      "",
+      "interface ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}Props {",
+      "\tref?: Ref<${2:HTMLDivElement}>;",
+      "\t$3",
+      "}",
+      "",
+      "const ${1} = ({ ref, $4 }: ${1}Props) => {",
+      "\treturn (",
+      "\t\t<div ref={ref} className=\"$5\">",
+      "\t\t\t<h1>${1}</h1>",
+      "\t\t</div>",
+      "\t);",
+      "};",
+      "",
+      "export default ${1};"
+    ]
+  },
+
+  "React TypeScript Custom Hook": {
+    "prefix": "rhook",
+    "description": "React TypeScript custom hook",
+    "body": [
+      "import { useState, useEffect } from 'react';",
+      "",
+      "const use${1:${TM_FILENAME_BASE/^use(.+)|(.+)/${2:/pascalcase}${1}/}} = ($2) => {",
+      "\tconst [${3:state}, setState] = useState<${4:string}>(${5:''});",
+      "",
+      "\tuseEffect(() => {",
+      "\t\t$6",
+      "\t}, []);",
+      "",
+      "\treturn { ${3} };",
+      "};",
+      "",
+      "export default use${1};"
+    ]
+  },
+
+  "React TypeScript Context": {
+    "prefix": "rctx",
+    "description": "React TypeScript Context with Provider and hook (React 18+)",
+    "body": [
+      "import { createContext, useContext } from 'react';",
+      "import type { ReactNode } from 'react';",
+      "",
+      "interface ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}ContextType {",
+      "\t$2",
+      "}",
+      "",
+      "const ${1}Context = createContext<${1}ContextType | undefined>(undefined);",
+      "",
+      "export const ${1}Provider = ({ children }: { children: ReactNode }) => {",
+      "\treturn (",
+      "\t\t<${1}Context.Provider value={{ $3 }}>",
+      "\t\t\t{children}",
+      "\t\t</${1}Context.Provider>",
+      "\t);",
+      "};",
+      "",
+      "export const use${1} = () => {",
+      "\tconst context = useContext(${1}Context);",
+      "\tif (!context) throw new Error('use${1} must be used within ${1}Provider');",
+      "\treturn context;",
+      "};"
+    ]
+  },
+
+  "TypeScript Inner Function": {
+    "prefix": "cf",
+    "description": "Const arrow function for use inside a component — no params",
+    "body": [
+      "const ${1:handleAction} = () => {",
+      "\t$2",
+      "};"
+    ]
+  },
+
+  "TypeScript Inner Function with Params": {
+    "prefix": "cfp",
+    "description": "Const arrow function for use inside a component — with inline params",
+    "body": [
+      "const ${1:handleAction} = (${2:param}: ${3:string}) => {",
+      "\t$4",
+      "};"
+    ]
+  },
+
+  "TypeScript Inner Async Function": {
+    "prefix": "acf",
+    "description": "Async const arrow function for use inside a component — no params",
+    "body": [
+      "const ${1:handleAction} = async () => {",
+      "\t$2",
+      "};"
+    ]
+  },
+
+  "TypeScript Inner Async Function with Params": {
+    "prefix": "acfp",
+    "description": "Async const arrow function for use inside a component — with inline params",
+    "body": [
+      "const ${1:handleAction} = async (${2:param}: ${3:string}) => {",
+      "\t$4",
+      "};"
+    ]
+  },
+
+  "TypeScript Export Function": {
+    "prefix": "fn",
+    "description": "Exported TypeScript arrow function — no params, name derived from filename",
+    "body": [
+      "export const ${TM_FILENAME_BASE/(.*)/${1:/camelcase}/} = () => {",
+      "\t$1",
+      "};"
+    ]
+  },
+
+  "TypeScript Export Function with Params": {
+    "prefix": "fnp",
+    "description": "Exported TypeScript arrow function with exported params type — name derived from filename",
+    "body": [
+      "export type ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}Params = {",
+      "\t$2",
+      "};",
+      "",
+      "export const ${TM_FILENAME_BASE/(.*)/${1:/camelcase}/} = ({ $2 }: ${1}Params) => {",
+      "\t$3",
+      "};"
+    ]
+  },
+
+  "TypeScript Export Function with Params (named)": {
+    "prefix": "fnx",
+    "description": "Exported TypeScript arrow function with exported params type — manually set name",
+    "body": [
+      "export type ${1}Params = {",
+      "\t$2",
+      "};",
+      "",
+      "export const ${1/^(.)(.*)/${1:/downcase}$2/} = ({ $2 }: ${1}Params) => {",
+      "\t$3",
+      "};"
+    ]
+  },
+
+  "TypeScript Export Async Function": {
+    "prefix": "afn",
+    "description": "Exported async TypeScript arrow function — no params, name derived from filename",
+    "body": [
+      "export const ${TM_FILENAME_BASE/(.*)/${1:/camelcase}/} = async () => {",
+      "\t$1",
+      "};"
+    ]
+  },
+  "TypeScript Export Async Function with Params": {
+    "prefix": "afnp",
+    "description": "Exported async TypeScript arrow function with exported params type — name derived from filename",
+    "body": [
+      "export type ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}Params = {",
+      "\t$2",
+      "};",
+      "",
+      "export const ${TM_FILENAME_BASE/(.*)/${1:/camelcase}/} = async ({ $2 }: ${1}Params) => {",
+      "\t$3",
+      "};"
+    ]
+  },
+  "TypeScript Export Async Function with Params (named)": {
+    "prefix": "afnx",
+    "description": "Exported async TypeScript arrow function with exported params type — manually set name",
+    "body": [
+      "export type ${1}Params = {",
+      "\t$2",
+      "};",
+      "",
+      "export const ${1/^(.)(.*)/${1:/downcase}$2/} = async ({ $2 }: ${1}Params) => {",
+      "\t$3",
+      "};"
+    ]
+  }
+}

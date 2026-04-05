@@ -1,0 +1,417 @@
+{
+  // IMPORT SNIPPETS
+  "Import No Name": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "imn",
+    "body": ["import '${1:module}';"],
+    "description": "Import a module without a name",
+  },
+  "Import Default": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "imp",
+    "body": ["import ${2:moduleName} from '${1:module}';"],
+    "description": "Import default export",
+  },
+  "Import Destructured": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "imd",
+    "body": ["import { $2 } from '${1:module}';"],
+    "description": "Import destructured module",
+  },
+  "Import Everything": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "ime",
+    "body": ["import * as ${2:alias} from '${1:module}';"],
+    "description": "Import all as alias",
+  },
+  "Import As": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "ima",
+    "body": [
+      "import { ${2:originalName} as ${3:aliasName} } from '${1:module}';",
+    ],
+    "description": "Import with alias",
+  },
+  // EXPORT SNIPPETS
+  "Export Default": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "exp",
+    "body": ["export default ${1:moduleName};"],
+    "description": "Export default",
+  },
+  "Export Destructured": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "exd",
+    "body": ["export { $2 } from '${1:module}';"],
+    "description": "Export destructured from module",
+  },
+  "Export As": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "exa",
+    "body": [
+      "export { ${2:originalName} as ${3:aliasName} } from '${1:module}';",
+    ],
+    "description": "Export with alias",
+  },
+  "Export Named Function": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "enf",
+    "body": [
+      "export const ${1:functionName} = (${2:params}) => {",
+      "  $0",
+      "};",
+    ],
+    "description": "Export named arrow function",
+  },
+  "Export Default Anonymous": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "edf",
+    "body": ["export default (${1:params}) => { $0 };"],
+    "description": "Export default anonymous function",
+  },
+  "Export Default Named Function": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "ednf",
+    "body": [
+      "export default function ${1:functionName}(${2:params}) {",
+      "  $0",
+      "}",
+    ],
+    "description": "Export default named function",
+  },
+  // Array SNIPPETS
+  "Array forEach Method": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "afre",
+    "body": ["${1:array}.forEach(${2:element} => {", "  $0", "});"],
+    "description": "Array forEach",
+  },
+  "Array Map Method": {
+    "prefix": "amap",
+    "body": [
+      "${1:array}.map((${2:item}) => {",
+      "  $0",
+      "  return ${3:result};",
+      "});"
+    ],
+    "description": "Transform array into a new array"
+  },
+  "Array Find Method": {
+    "prefix": "afnd",
+    "body": [
+      "const ${1:found} = ${2:array}.find((${3:item}) => ${3:item}.${4:id} === ${5:targetId});",
+      "$0"
+    ],
+    "description": "Find the first matching element"
+  },
+  "Array Filter Method": {
+    "prefix": "afil",
+    "body": [
+      "const ${1:filtered} = ${2:array}.filter((${3:item}) => ${3:item}.${4:property} === ${5:value});",
+      "$0"
+    ],
+    "description": "Filter array based on condition"
+  },
+  "Array Reduce Method": {
+    "prefix": "ared",
+    "body": [
+      "${1:array}.reduce((${2:acc}, ${3:curr}) => {",
+      "  $0",
+      "  return ${2:acc};",
+      "}, ${4:initialValue});"
+    ],
+    "description": "Reduce array to a single value"
+  },
+  // Object SNIPPETS
+  "Object Entries Map": {
+    "prefix": "oent",
+    "body": [
+      "Object.entries(${1:object}).map(([${2:key}, ${3:value}]) => (",
+      "  <div key={${2:key}}>",
+      "    <strong>{${2:key}}:</strong> {${3:value}}",
+      "    $0",
+      "  </div>",
+      "));"
+    ],
+    "description": "Convert object to entries and map to JSX"
+  },
+  "Object Keys": {
+    "prefix": "okeys",
+    "body": [
+      "const ${1:keys} = Object.keys(${2:object});",
+      "$0"
+    ],
+    "description": "Get an array of object keys"
+  },
+  "Object Values": {
+    "prefix": "ovals",
+    "body": [
+      "const ${1:values} = Object.values(${2:object});",
+      "$0"
+    ],
+    "description": "Get an array of object values"
+  },
+  "Object Update (Spread)": {
+    "prefix": "ospr",
+    "body": [
+      "set${1:State}(prev => ({",
+      "  ...prev,",
+      "  ${2:key}: ${3:value}",
+      "}));",
+      "$0"
+    ],
+    "description": "Update React state object using spread operator"
+  },
+  // LOOP SNIPPETS
+  "For Let i Loop": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "fori",
+    "body": [
+      "for (let ${1:i} = 0; ${1:i} < ${2:array}.length; ${1:i}++) {",
+      "  const ${3:element} = ${2:array}[${1:i}];",
+      "  $0",
+      "}"
+    ],
+    "description": "For...let i loop"
+  },
+  "For Let i Loop Reverse": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "forr",
+    "body": [
+      "for (let ${1:i} = ${2:array}.length - 1; ${1:i} >= 0; ${1:i}--) {",
+      "  const ${3:element} = ${2:array}[${1:i}];",
+      "  $0",
+      "}"
+    ],
+    "description": "Reverse for loop (i--)"
+  },
+  "For Of Loop": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "forof",
+    "body": ["for (let ${1:item} of ${2:iterable}) {", "  $0", "}"],
+    "description": "For...of loop",
+  },
+  "For In Loop": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "forin",
+    "body": ["for (let ${1:key} in ${2:object}) {", "  $0", "}"],
+    "description": "For...in loop",
+  },
+  // FUNCTION SNIPPETS
+  "Class Method Function": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "met",
+    "body": ["${1:methodName} = (${2:params}) => {", "  $0", "};"],
+    "description": "Class property method function",
+  },
+  "Anonymous Function": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "anfn",
+    "body": ["(${1:params}) => { $0 }"],
+    "description": "Anonymous arrow function",
+  },
+  "Named Function": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "nfn",
+    "body": ["const ${1:functionName} = (${2:params}) => {", "  $0", "};"],
+    "description": "Named arrow function",
+  },
+  "Destructure Object": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "dob",
+    "body": ["const { $2 } = ${1:object};"],
+    "description": "Object destructuring",
+  },
+  "Destructure Array": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "dar",
+    "body": ["const [$2] = ${1:array};"],
+    "description": "Array destructuring",
+  },
+  "Set Interval": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "sti",
+    "body": ["setInterval(() => {", "  $0", "}, ${1:1000});"],
+    "description": "setInterval",
+  },
+  "Set Timeout": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "sto",
+    "body": ["setTimeout(() => {", "  $0", "}, ${1:1000});"],
+    "description": "setTimeout",
+  },
+  // CONSOLE LOGGING SNIPPETS
+  "Console Log": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "clog",
+    "body": ["console.log($1);"],
+    "description": "Log to console",
+  },
+  "Console Clear": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "clcr",
+    "body": ["console.clear();"],
+    "description": "Clear the console",
+  },
+  "Console Log Object": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "clobj",
+    "body": ["console.log('${1:variable}: ', $1);"],
+    "description": "Log variable with label",
+  },
+  "Console Log JSON": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "cljson",
+    "body": ["console.log('${1:variable}: ', JSON.stringify($1, null, 2));"],
+    "description": "Log stringified JSON with label",
+  },
+  "Console Assert": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "classert",
+    "body": ["console.assert(${1:expression}, ${2:object});"],
+    "description": "Log if expression is false",
+  },
+  "Console Count": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "clcount",
+    "body": ["console.count('${1:label}');"],
+    "description": "Count number of times called",
+  },
+  "Console Dir": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "cldir",
+    "body": ["console.dir(${1:object});"],
+    "description": "Print object representation",
+  },
+  "Console Error": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "clerr",
+    "body": ["console.error($1);"],
+    "description": "Log error to console",
+  },
+  "Console Warn": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "clwarn",
+    "body": ["console.warn($1);"],
+    "description": "Log warning to console",
+  },
+  "Console Info": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "clinfo",
+    "body": ["console.info($1);"],
+    "description": "Log info to console",
+  },
+  "Console Trace": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "cltrace",
+    "body": ["console.trace($1);"],
+    "description": "Print stack trace",
+  },
+  // ASYNC/AWAIT SNIPPETS
+  "Async Named Function": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "asyncfn",
+    "body": [
+      "async function ${1:name}(${2:param}) {",
+      "  const ${3:result} = await ${4:promise};",
+      "  return ${3:result};",
+      "};"
+    ],
+    "description": "Named async function expression"
+  },
+  "Async Arrow Function": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "asfnafn",
+    "body": [
+      "const ${1:name} = async (${2:param}) => {",
+      "  $0",
+      "};"
+    ],
+    "description": "Async arrow function expression"
+  },
+  "New Promise": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "promise",
+    "body": ["return new Promise((resolve, reject) => {", "  $0", "});"],
+    "description": "Return new Promise",
+  },
+  "Await Promise All Array": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "awaitpa",
+    "body": [
+      "const ${1:results} = await Promise.all([${2:promises}]);",
+      "$0"
+    ],
+    "description": "Await an array of promises in parallel"
+  },
+  "Await Promise All Array Map": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "awaitpam",
+    "body": [
+      "const ${1:results} = await Promise.all(",
+      "  ${2:array}.map(async (${3:value}) => {",
+      "    $0",
+      "  })",
+      ");"
+    ],
+    "description": "Wait for an array of promises to resolve in parallel"
+  },
+  // TRY-CATCH SNIPPETS
+  "Try Catch": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "tryc",
+    "body": [
+      "try {",
+      "  $0",
+      "} catch (${1:err}) {",
+      "  console.error(${1:err});",
+      "}"
+    ],
+    "description": "Try...catch block"
+  },
+  "Try Catch Finally": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "trycf",
+    "body": [
+      "try {",
+      "  $0",
+      "} catch (${1:err}) {",
+      "  console.error(${1:err});",
+      "} finally {",
+      "  ${2:// cleanup logic}",
+      "}"
+    ],
+    "description": "Try...catch...finally block"
+  },
+  "Try Finally": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "tryf",
+    "body": [
+      "try {",
+      "  $0",
+      "} finally {",
+      "  ${1:// cleanup logic}",
+      "}"
+    ],
+    "description": "Try...finally block"
+  },
+  // JSON SNIPPETS
+  "JSON Parse": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "jsonp",
+    "body": [
+      "JSON.parse(${1:obj});",
+      "$0"
+    ],
+    "description": "Parse a JSON string into an object"
+  },
+  "JSON Stringify": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "jsons",
+    "body": [
+      "JSON.stringify(${1:obj}, null);",
+      "$0"
+    ],
+    "description": "Convert an object into a pretty-printed JSON string"
+  },
+}
