@@ -1,7 +1,7 @@
 {
   "github.copilot.chat.commitMessageGeneration.instructions": [
     {
-      "text": "Follow the Conventional Commits specification. Use the format: '<type>(scope): short summary in imperative mood\n\n<detailed body with bullet points explaining the WHY, not just the WHAT>\n\n<footer for breaking changes or issue references>'. Types must be: feat, fix, refactor, docs, style, test, or chore. The scope should be the module or file category (e.g., 'auth', 'ui', 'api'). The body must explain the reasoning behind the logic changes with each bullet point including emojis, and the footer should include any breaking changes or references to related issues."
+      "text": "Follow Conventional Commits: '<type>(scope): short summary in imperative mood>'\n\nBody: Provide a concise summary of the major changes using bullet points. Group related changes together into high-level points rather than listing every individual file. Focus on the 'WHY' and the 'IMPACT' of the logic. Each bullet point must end with a single, contextually appropriate emoji. Keep descriptions punchy and professional.\n\nFooter: Include optional breaking changes or issue references."
     }
   ]
 }
