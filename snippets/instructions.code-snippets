@@ -1,0 +1,52 @@
+{
+  "Code Gen Instruction": {
+    "scope": "json,jsonc",
+    "prefix": "instruction-codegen",
+    "body": [
+      "\"github.copilot.chat.codeGeneration.instructions\": [",
+      "  {",
+      "    \"text\": \"Act as a Senior Software Engineer. Prioritize readable, performant, and type-safe code. Adhere to the project's .editorconfig and Biome/ESLint/Prettier rules. For every function or significant logic block, include a TSDoc/JSDoc comment that specifies: @description (the 'why' behind the change), @param, @returns, and any @sideEffects. Break down complex refactors into atomic, bulleted steps. Ensure all new code maintains high cohesion and low coupling with the existing architecture.\"",
+      "  }",
+      "]"
+    ],
+    "description": "Generate Copilot code generation instructions"
+  },
+  "Git Gen Instruction": {
+    "scope": "json,jsonc",
+    "prefix": "instruction-git",
+    "body": [
+      "\"github.copilot.chat.commitMessageGeneration.instructions\": [",
+      "  {",
+      "    \"text\": \"Follow the Conventional Commits specification. Use the format: '<type>(${1:scope}): ${2:short summary in imperative mood}\\n\\n<detailed body with bullet points explaining the WHY, not just the WHAT>\\n\\n<footer for breaking changes or issue references>'. Types must be: feat, fix, refactor, docs, style, test, or chore. The scope should be the module or file category (e.g., 'auth', 'ui', 'api'). The body must explain the reasoning behind the logic changes with each bullet point including emojis, and the footer should include any breaking changes or references to related issues.\"",
+      "  }",
+      "]"
+    ],
+    "description": "Generate Copilot commit message instructions"
+  },
+  "Review Gen Instruction": {
+    "scope": "json,jsonc",
+    "prefix": "instruction-review",
+    "body": [
+      "\"github.copilot.chat.re]view.instructions\": [",
+      "  {",
+      "    \"text\": \"Review code like a Principal Engineer. Focus on: 1. Logic errors and edge cases. 2. Performance bottlenecks (O(n) complexity). 3. Security vulnerabilities (injection, sensitive data exposure). 4. TypeScript best practices (avoiding 'any', proper interface usage). 5. SOLID principles and DRY code. If you find an issue, explain WHY it is a problem and provide a refactored solution using modern ES6+ syntax.\"",
+      "  }",
+      "]"
+    ],
+    "description": "Generate Copilot code review instructions"
+  },
+  "Test Gen Instruction": {
+    "scope": "json,jsonc",
+    "prefix": "instruction-test",
+    "body": [
+      "\"github.copilot.chat.testGeneration.instructions\": [",
+      "  {",
+      "    \"text\": \"Generate tests using the AAA (Arrange-Act-Assert) pattern. Prioritize integration tests for critical user flows and unit tests for complex business logic using the Vitest/Jest and React Testing Library tools available in the workspace. Ensure comprehensive coverage of edge cases, including error boundaries, loading states, and null/empty data scenarios. Mock external dependencies and API calls strictly using a factory pattern where applicable. Aim for readable, maintainable test code that asserts the intended behavior and accessibility of the system, rather than internal implementation details.\"",
+      "  }",
+      "]"
+    ],
+    "description": "Generate AAA-pattern test generation instructions"
+  }
+}
+
+
