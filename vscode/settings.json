@@ -31,7 +31,7 @@
   "editor.find.addExtraSpaceOnTop": false,
   "editor.fontFamily": "'Brass Mono Code', 'Brass Mono', monospace",
   "editor.fontLigatures": true,
-  "editor.fontSize": 18,
+  "editor.fontSize": 20,
   "editor.fontWeight": "normal",
   "editor.formatOnPaste": false,
   "editor.formatOnSave": true,
@@ -45,7 +45,7 @@
   "editor.inlineSuggest.enabled": true,
   "editor.letterSpacing": 0.25,
   "editor.lightbulb.enabled": "off",
-  "editor.lineHeight": 27,
+  "editor.lineHeight": 28,
   "editor.linkedEditing": true,
   "editor.matchBrackets": "never",
   "editor.minimap.autohide": "mouseover",
@@ -67,8 +67,8 @@
   "editor.suggest.showFunctions": true,
   "editor.suggest.showStatusBar": true,
   "editor.suggest.snippetsPreventQuickSuggestions": false,
-  "editor.suggestFontSize": 22,
-  "editor.suggestLineHeight": 30,
+  "editor.suggestFontSize": 20,
+  "editor.suggestLineHeight": 28,
   "editor.suggestSelection": "first",
   "editor.tabCompletion": "onlySnippets",
   "editor.tabSize": 2,
@@ -110,7 +110,9 @@
           }
         },
         {
-          "scope": ["comment.block.documentation entity.name.type.instance"],
+          "scope": [
+            "comment.block.documentation entity.name.type.instance"
+          ],
           "settings": {
             "fontStyle": "italic",
             "foreground": "#73daca"
@@ -125,7 +127,9 @@
           }
         },
         {
-          "scope": ["comment.block.documentation variable"],
+          "scope": [
+            "comment.block.documentation variable"
+          ],
           "settings": {
             "fontStyle": "italic",
             "foreground": "#e0af68"
@@ -135,7 +139,9 @@
     }
   },
   // Emmet settings
-  "emmet.excludeLanguages": ["markdown"],
+  "emmet.excludeLanguages": [
+    "markdown"
+  ],
   "emmet.includeLanguages": {
     "liquid": "html",
     "css": "css",
@@ -193,15 +199,14 @@
     "out-vscode-reh/**": true,
     "extensions/**/dist/**": true,
     "extensions/**/out/**": true,
-    "extensions/terminal-suggest/src/completions/upstream/**": true,
-    "test/smoke/out/**": true,
-    "test/automation/out/**": true,
-    "src/vs/platform/agentHost/common/state/protocol/**": true,
-    "test/integration/browser/out/**": true
-    // "src/vs/sessions/**": true
+    "test/**/dist/**": true,
+    "test/**/out/**": true
   },
   // Git settings
-  "git.branchProtection": ["main", "release/*"],
+  "git.branchProtection": [
+    "main",
+    "release/*"
+  ],
   "git.branchProtectionPrompt": "alwaysCommit",
   "git.branchRandomName.enable": true,
   "git.confirmSync": false,
@@ -297,7 +302,10 @@
       ]
     },
     "Git Bash": {
-      "args": ["--login", "-i"],
+      "args": [
+        "--login",
+        "-i"
+      ],
       "path": "C:\\Program Files\\Git\\bin\\bash.exe"
     },
     "PowerShell": {
@@ -357,7 +365,6 @@
   "workbench.tree.enableStickyScroll": false,
   "workbench.tree.indent": 8,
   "workbench.tree.renderIndentGuides": "always",
-
   // --- Extension Settings ---
   // Editor config
   "editorconfig.generateAuto": false,
@@ -387,10 +394,10 @@
   // Import Cost
   "importCost.largePackageDarkColor": "#ee4458",
   "importCost.largePackageLightColor": "#ee4458",
-  "importCost.mediumPackageDarkColor": "#f05769",
-  "importCost.mediumPackageLightColor": "#f05769",
-  "importCost.smallPackageDarkColor": "#f16979",
-  "importCost.smallPackageLightColor": "#f16979",
+  "importCost.mediumPackageDarkColor": "#f16979",
+  "importCost.mediumPackageLightColor": "#f16979",
+  "importCost.smallPackageDarkColor": "#f58f9b",
+  "importCost.smallPackageLightColor": "#f58f9b",
   // Live Preview settings
   "livePreview.useIntegratedBrowser": true,
   // Material Icon Theme
@@ -400,9 +407,11 @@
   // Package JSON Upgrade
   "package-json-upgrade.majorUpgradeColorOverwrite": "#ee4458",
   "package-json-upgrade.minorUpgradeColorOverwrite": "#f16979",
-  "package-json-upgrade.patchUpgradeColorOverwrite": "#f05769",
+  "package-json-upgrade.patchUpgradeColorOverwrite": "#f58f9b",
   // Project Manager settings
-  "projectManager.git.baseFolders": ["C:\\Users\\subal\\Code"],
+  "projectManager.git.baseFolders": [
+    "C:\\Users\\subal\\Code"
+  ],
   // Tailwind CSS
   "tailwindCSS.emmetCompletions": true,
   "tailwindCSS.includeLanguages": {
@@ -410,7 +419,6 @@
   },
   // Thunder Client
   "thunder-client.requestLayout": "Top/Bottom",
-
   // --- Formatter & Linter Settings ---
   // Biome Extension Settings
   "biome.enabled": false,
@@ -420,7 +428,11 @@
   "eslint.enable": false,
   "eslint.codeActionsOnSave.mode": "problems",
   "eslint.run": "onSave",
-  "eslint.workingDirectories": [{ "mode": "auto" }],
+  "eslint.workingDirectories": [
+    {
+      "mode": "auto"
+    }
+  ],
   "eslint.useFlatConfig": true,
   // Prettier Extension Settings
   "prettier.enable": true,
@@ -446,7 +458,6 @@
   "prettier.trailingComma": "all",
   "prettier.useTabs": false,
   "prettier.vueIndentScriptAndStyle": false,
-
   // --- Language Specific Settings ---
   "[javascript][javascriptreact]": {
     "editor.snippetSuggestions": "top",
