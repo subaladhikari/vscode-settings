@@ -2,17 +2,13 @@
   // Breadcrumbs settings
   "breadcrumbs.enabled": true,
   "breadcrumbs.filePath": "on",
-
-  // GitHub Copilot
+  // Chat settings
   "chat.viewSessions.orientation": "stacked",
-
   // CSS settings
   "css.validate": false,
   "css.format.spaceAroundSelectorSeparator": true,
-
   // Diff-Editor settings
   "diffEditor.ignoreTrimWhitespace": false,
-
   // Editor settings
   "editor.acceptSuggestionOnEnter": "on",
   "editor.accessibilitySupport": "off",
@@ -80,10 +76,29 @@
   "editor.unicodeHighlight.allowedLocales": {
     "cs": true
   },
+  "editor.wordBasedSuggestions": "off",
   "editor.wordWrap": "on",
   "editor.tokenColorCustomizations": {
     "[Tokyo Night]": {
       "textMateRules": [
+        {
+          "scope": [
+            "comment",
+            "comment.block.documentation",
+            "comment.block.documentation.js",
+            "comment.line.double-slash.js",
+            "storage.type.class.jsdoc",
+            "entity.name.type.instance.jsdoc",
+            "variable.other.jsdoc",
+            "punctuation.definition.comment",
+            "punctuation.definition.comment.begin.documentation",
+            "punctuation.definition.comment.end.documentation"
+          ],
+          "settings": {
+            "fontStyle": "italic",
+            "foreground": "#646E9C"
+          }
+        },
         {
           "scope": [
             "comment keyword.codetag.notation",
@@ -119,18 +134,14 @@
       ]
     }
   },
-
-  // Editor config
-  "editorconfig.generateAuto": false,
-
   // Emmet settings
   "emmet.excludeLanguages": ["markdown"],
   "emmet.includeLanguages": {
-    "css": "css",
-    "javascript": "javascriptreact",
     "liquid": "html",
-    "postcss": "css",
+    "css": "css",
     "scss": "css",
+    "postcss": "css",
+    "javascript": "javascriptreact",
     "typescript": "typescriptreact"
   },
   "emmet.showExpandedAbbreviation": "never",
@@ -139,16 +150,13 @@
     "javascript": "html, css, jsx"
   },
   "emmet.triggerExpansionOnTab": true,
-
   // Explorer settings
   "explorer.compactFolders": false,
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
-
   // Extensions settings
   "extensions.autoUpdate": "onlyEnabledExtensions",
   "extensions.ignoreRecommendations": true,
-
   // Files settings
   "files.associations": {
     "*.css": "tailwindcss",
@@ -192,7 +200,6 @@
     "test/integration/browser/out/**": true
     // "src/vs/sessions/**": true
   },
-
   // Git settings
   "git.branchProtection": ["main", "release/*"],
   "git.branchProtectionPrompt": "alwaysCommit",
@@ -209,7 +216,6 @@
   "git.mergeEditor": true,
   "git.openRepositoryInParentFolders": "always",
   "git.pullBeforeCheckout": true,
-
   // GitHub Copilot
   "github.copilot.enable": {
     "*": true,
@@ -217,31 +223,28 @@
     "markdown": false,
     "scminput": false
   },
+  "github.copilot.chat.languageContext.inline.typescript.enabled": true,
+  "github.copilot.chat.languageContext.fix.typescript.enabled": true,
+  "github.copilot.chat.languageContext.typescript.enabled": true,
+  "github.copilot.chat.languageContext.typescript.includeDocumentation": true,
+  "github.copilot.chat.scopeSelection": true,
   "github.copilot.nextEditSuggestions.enabled": true,
-
+  // Gutter Preview settings
+  "gutterpreview.currentColorForSVG": "black",
   // HTML settings
+  "html.format.enable": false,
   "html.format.indentInnerHtml": true,
   "html.format.preserveNewLines": true,
   "html.format.wrapAttributes": "force-expand-multiline",
   "html.format.wrapLineLength": 80,
   "html.validate.scripts": false,
   "html.validate.styles": false,
-
-  // Import Cost
-  "importCost.largePackageDarkColor": "#ee4458",
-  "importCost.largePackageLightColor": "#ee4458",
-  "importCost.mediumPackageDarkColor": "#ee4458",
-  "importCost.mediumPackageLightColor": "#ee4458",
-  "importCost.smallPackageDarkColor": "#ee4458",
-  "importCost.smallPackageLightColor": "#ee4458",
-
-  // --- Chat ---
+  // Inline Chat settings
   "inlineChat.enableV2": true,
   "inlineChat.affordance": "editor",
-
   // JavaScript settings
+  "javascript.validate.enable": false,
   "javascript.updateImportsOnFileMove.enabled": "always",
-
   // JSON settings
   "json.schemaDownload.trustedDomains": {
     "https://schemastore.azurewebsites.net/": true,
@@ -251,18 +254,6 @@
     "https://json-schema.org/": true,
     "https://biomejs.dev": true
   },
-
-  // Live Preview settings
-  "livePreview.useIntegratedBrowser": true,
-
-  // Package JSON Upgrade
-  "package-json-upgrade.majorUpgradeColorOverwrite": "#ee4458",
-  "package-json-upgrade.minorUpgradeColorOverwrite": "#ee4458",
-  "package-json-upgrade.patchUpgradeColorOverwrite": "#ee4458",
-
-  // Project Manager settings
-  "projectManager.git.baseFolders": ["C:\\Users\\subal\\Code"],
-
   // Search settings
   "search.exclude": {
     "**/.git": true,
@@ -285,16 +276,8 @@
     ".build/**": true,
     "cli/target/**": true
   },
-
   // General settings
   "security.workspace.trust.untrustedFiles": "open",
-
-  // Tailwind CSS
-  "tailwindCSS.emmetCompletions": true,
-  "tailwindCSS.includeLanguages": {
-    "plaintext": "html"
-  },
-
   // Terminal settings
   "terminal.integrated.cursorBlinking": false,
   "terminal.integrated.cursorStyle": "line",
@@ -323,10 +306,6 @@
     }
   },
   "terminal.integrated.stickyScroll.enabled": false,
-
-  // Thunder Client
-  "thunder-client.requestLayout": "Top/Bottom",
-
   // TypeScript settings
   "typescript.format.enable": true,
   "typescript.experimental.useTsgo": true,
@@ -343,16 +322,14 @@
   "typescript.format.placeOpenBraceOnNewLineForFunctions": false,
   "typescript.format.placeOpenBraceOnNewLineForControlBlocks": false,
   "typescript.preferences.quoteStyle": "double",
-
   // General settings
   "update.mode": "none",
-
   // General settings
   "window.confirmSaveUntitledWorkspace": false,
   "window.newWindowProfile": "Default",
-
   // Workbench settings
   "workbench.browser.openLocalhostLinks": false,
+  "workbench.colorTheme": "Tokyo Night",
   "workbench.colorCustomizations": {
     "[Tokyo Night]": {
       "editorIndentGuide.activeBackground1": "#505362",
@@ -381,22 +358,76 @@
   "workbench.tree.indent": 8,
   "workbench.tree.renderIndentGuides": "always",
 
-  // --- Format & Lint Specific Settings ---
+  // --- Extension Settings ---
+  // Editor config
+  "editorconfig.generateAuto": false,
+  // Highlight matching tags
+  "highlight-matching-tag.styles": {
+    "opening": {
+      "left": {
+        "custom": {
+          "borderWidth": "0 0 0 2px",
+          "borderStyle": "solid",
+          "borderColor": "yellow",
+          "borderRadius": "4px",
+          "overviewRulerColor": "white"
+        }
+      },
+      "right": {
+        "custom": {
+          "borderWidth": "0 2px 0 0",
+          "borderStyle": "solid",
+          "borderColor": "yellow",
+          "borderRadius": "4px",
+          "overviewRulerColor": "white"
+        }
+      }
+    }
+  },
+  // Import Cost
+  "importCost.largePackageDarkColor": "#ee4458",
+  "importCost.largePackageLightColor": "#ee4458",
+  "importCost.mediumPackageDarkColor": "#f05769",
+  "importCost.mediumPackageLightColor": "#f05769",
+  "importCost.smallPackageDarkColor": "#f16979",
+  "importCost.smallPackageLightColor": "#f16979",
+  // Live Preview settings
+  "livePreview.useIntegratedBrowser": true,
+  // Material Icon Theme
+  "material-icon-theme.folders.associations": {
+    "ui": "Theme"
+  },
+  // Package JSON Upgrade
+  "package-json-upgrade.majorUpgradeColorOverwrite": "#ee4458",
+  "package-json-upgrade.minorUpgradeColorOverwrite": "#f16979",
+  "package-json-upgrade.patchUpgradeColorOverwrite": "#f05769",
+  // Project Manager settings
+  "projectManager.git.baseFolders": ["C:\\Users\\subal\\Code"],
+  // Tailwind CSS
+  "tailwindCSS.emmetCompletions": true,
+  "tailwindCSS.includeLanguages": {
+    "plaintext": "html"
+  },
+  // Thunder Client
+  "thunder-client.requestLayout": "Top/Bottom",
+
+  // --- Formatter & Linter Settings ---
   // Biome Extension Settings
   "biome.enabled": false,
   "biome.requireConfiguration": true,
   "biome.suggestInstallingGlobally": false,
   // ESLint Extension Settings
   "eslint.enable": false,
+  "eslint.codeActionsOnSave.mode": "problems",
   "eslint.run": "onSave",
   "eslint.workingDirectories": [{ "mode": "auto" }],
   "eslint.useFlatConfig": true,
   // Prettier Extension Settings
+  "prettier.enable": true,
   "prettier.arrowParens": "always",
   "prettier.bracketSameLine": false,
   "prettier.bracketSpacing": true,
   "prettier.embeddedLanguageFormatting": "auto",
-  "prettier.enable": true,
   "prettier.endOfLine": "lf",
   "prettier.experimentalOperatorPosition": "start",
   "prettier.experimentalTernaries": true,
@@ -427,11 +458,5 @@
   },
   "[json][jsonc][plaintext][markdown]": {
     "files.insertFinalNewline": false
-  },
-  "github.copilot.chat.languageContext.inline.typescript.enabled": true,
-  "github.copilot.chat.languageContext.fix.typescript.enabled": true,
-  "github.copilot.chat.languageContext.typescript.enabled": true,
-  "github.copilot.chat.languageContext.typescript.includeDocumentation": true,
-  "github.copilot.chat.scopeSelection": true,
-  "workbench.colorTheme": "Tokyo Night"
+  }
 }
