@@ -1,4 +1,6 @@
 {
+  // Accessibility settings
+  "accessibility.openChatEditedFiles": true,
   // Breadcrumbs settings
   "breadcrumbs.enabled": true,
   "breadcrumbs.filePath": "on",
@@ -16,36 +18,27 @@
   "editor.bracketPairColorization.enabled": true,
   "editor.codeActionsOnSave": {
     "source.fixAll": "never",
-    "source.fixAll.biome": "explicit",
-    "source.fixAll.eslint": "explicit",
-    "source.fixAll.prettier": "explicit",
-    "source.fixAll.markdownlint": "explicit",
-    "source.organizeImports": "never",
-    "source.organizeImports.biome": "explicit",
-    "source.organizeImports.eslint": "explicit"
+    "source.organizeImports": "never"
   },
   "editor.cursorBlinking": "solid",
   "editor.cursorSmoothCaretAnimation": "on",
   "editor.cursorStyle": "line",
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.find.addExtraSpaceOnTop": false,
   "editor.fontFamily": "'Brass Mono Code', 'Brass Mono', monospace",
   "editor.fontLigatures": true,
   "editor.fontSize": 20,
   "editor.fontWeight": "normal",
   "editor.formatOnPaste": false,
-  "editor.formatOnSave": true,
+  "editor.formatOnSave": false,
   "editor.guides.bracketPairs": "active",
   "editor.guides.bracketPairsHorizontal": "active",
   "editor.guides.highlightActiveIndentation": true,
   "editor.guides.indentation": true,
   "editor.hover.enabled": "on",
-  "editor.hover.sticky": false,
   "editor.inlineSuggest.edits.showCollapsed": true,
   "editor.inlineSuggest.enabled": true,
   "editor.letterSpacing": 0.25,
   "editor.lightbulb.enabled": "off",
-  "editor.lineHeight": 28,
   "editor.lineHeight": 28,
   "editor.linkedEditing": true,
   "editor.matchBrackets": "never",
@@ -319,7 +312,7 @@
   "typescript.format.insertSpaceBeforeFunctionParenthesis": false,
   "typescript.format.placeOpenBraceOnNewLineForFunctions": false,
   "typescript.format.placeOpenBraceOnNewLineForControlBlocks": false,
-  "typescript.preferences.quoteStyle": "double",
+  "typescript.preferences.quoteStyle": "single",
   // General settings
   "update.mode": "none",
   // General settings
@@ -350,7 +343,6 @@
   "workbench.productIconTheme": "fluent-icons",
   "workbench.secondarySideBar.defaultVisibility": "hidden",
   "workbench.secondarySideBar.showLabels": false,
-  "workbench.sideBar.location": "right",
   "workbench.tips.enabled": false,
   "workbench.tree.enableStickyScroll": false,
   "workbench.tree.indent": 8,
@@ -382,12 +374,12 @@
     }
   },
   // Import Cost
-  "importCost.largePackageDarkColor": "#ee4458",
-  "importCost.largePackageLightColor": "#ee4458",
-  "importCost.mediumPackageDarkColor": "#f16979",
-  "importCost.mediumPackageLightColor": "#f16979",
-  "importCost.smallPackageDarkColor": "#f58f9b",
-  "importCost.smallPackageLightColor": "#f58f9b",
+  "importCost.largePackageDarkColor": "#EE4458",
+  "importCost.largePackageLightColor": "#EE4458",
+  "importCost.mediumPackageDarkColor": "#FDE047",
+  "importCost.mediumPackageLightColor": "#FDE047",
+  "importCost.smallPackageDarkColor": "#22C55E",
+  "importCost.smallPackageLightColor": "#22C55E",
   // Live Preview settings
   "livePreview.useIntegratedBrowser": true,
   // Material Icon Theme
@@ -395,9 +387,9 @@
     "ui": "Theme"
   },
   // Package JSON Upgrade
-  "package-json-upgrade.majorUpgradeColorOverwrite": "#ee4458",
-  "package-json-upgrade.minorUpgradeColorOverwrite": "#f16979",
-  "package-json-upgrade.patchUpgradeColorOverwrite": "#f58f9b",
+  "package-json-upgrade.majorUpgradeColorOverwrite": "#EE4458",
+  "package-json-upgrade.minorUpgradeColorOverwrite": "#FDE047",
+  "package-json-upgrade.patchUpgradeColorOverwrite": "#22C55E",
   // Project Manager settings
   "projectManager.git.baseFolders": ["C:\\Users\\subal\\Code"],
   // Tailwind CSS
@@ -414,39 +406,34 @@
   "biome.suggestInstallingGlobally": false,
   // ESLint Extension Settings
   "eslint.enable": false,
-  "eslint.codeActionsOnSave.mode": "problems",
-  "eslint.run": "onSave",
-  "eslint.workingDirectories": [
-    {
-      "mode": "auto"
-    }
-  ],
   "eslint.useFlatConfig": true,
   // Prettier Extension Settings
-  "prettier.enable": true,
   "prettier.arrowParens": "always",
   "prettier.bracketSameLine": false,
   "prettier.bracketSpacing": true,
   "prettier.embeddedLanguageFormatting": "auto",
+  "prettier.enable": false,
   "prettier.endOfLine": "lf",
-  "prettier.experimentalOperatorPosition": "end",
-  "prettier.experimentalTernaries": true,
+  "prettier.experimentalOperatorPosition": "start",
+  "prettier.experimentalTernaries": false,
   "prettier.htmlWhitespaceSensitivity": "css",
   "prettier.insertPragma": false,
   "prettier.jsxSingleQuote": false,
   "prettier.objectWrap": "preserve",
-  "prettier.printWidth": 80,
+  "prettier.printWidth": 100,
   "prettier.proseWrap": "preserve",
   "prettier.quoteProps": "as-needed",
   "prettier.requirePragma": false,
   "prettier.semi": true,
   "prettier.singleAttributePerLine": true,
-  "prettier.singleQuote": false,
+  "prettier.singleQuote": true,
   "prettier.tabWidth": 2,
   "prettier.trailingComma": "all",
   "prettier.useTabs": false,
   "prettier.vueIndentScriptAndStyle": false,
+
   // --- Language Specific Settings ---
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "[javascript][javascriptreact]": {
     "editor.snippetSuggestions": "top",
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -456,6 +443,6 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[json][jsonc][plaintext][markdown]": {
-    "files.insertFinalNewline": false
+    "editor.defaultFormatter": null
   }
 }
