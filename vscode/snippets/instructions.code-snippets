@@ -5,8 +5,8 @@
     "body": [
       "\"github.copilot.chat.codeGeneration.instructions\": [",
       "  {",
-      "    \"text\": \"Act as a Senior Software Engineer. Prioritize readable, performant, and type-safe code. Adhere to the project's .editorconfig and Biome/ESLint/Prettier rules. For every function or significant logic block, include a TSDoc/JSDoc comment that specifies: @description (the 'why' behind the change), @param, @returns, and any @sideEffects. Break down complex refactors into atomic, bulleted steps. Ensure all new code maintains high cohesion and low coupling with the existing architecture.\"",
-      "  }",
+      "    \"text\": \"Act as a Senior Full-Stack Engineer. Prioritize production-ready, type-safe, and high-performance code. Strictly adhere to the project's .editorconfig and Biome/ESLint/Prettier rules. Prioritize SOLID principles, high cohesion, and low coupling in your architecture. Every function/logic block must include a TSDoc block with @description (focusing on 'why'), @param, @returns, and @sideEffects. Decompose complex logic into atomic, testable units with clear bulleted execution steps. Use exhaustive TypeScript typing—no 'any', no 'non-null assertions', and favor discriminated unions for state/props. Provide only the implementation or refactor without conversational overhead.\"",
+      "  },",
       "]",
     ],
     "description": "Generate Copilot code generation instructions",
@@ -17,7 +17,7 @@
     "body": [
       "\"github.copilot.chat.commitMessageGeneration.instructions\": [",
       "  {",
-      "    \"text\": \"Follow Conventional Commits: '<type>(${1:scope}): ${2:short summary in imperative mood>}'\\n\\nBody: Provide a concise summary of the major changes using bullet points. Group related changes together into high-level points rather than listing every individual file. Focus on the 'WHY' and the 'IMPACT' of the logic. Each bullet point must end with a single, contextually appropriate emoji. Keep descriptions punchy and professional.\\n\\nFooter: Include optional breaking changes or issue references.\"",
+      "    \"text\": \"Follow Conventional Commits: '<type>(${1:scope}): ${2:short summary in imperative mood>}'\\n\\nBody: Provide a concise summary of the major changes using bullet points. Group related changes together into high-level points rather than listing every individual file. Focus on the 'WHY' and the 'IMPACT' of the logic. Each bullet point must end with a single, contextually appropriate emoji. Keep descriptions punchy and professional.\\n\\nFooter: Optionally include breaking changes or issue references.\"",
       "  }",
       "]",
     ],
@@ -27,9 +27,9 @@
     "scope": "json,jsonc",
     "prefix": "instruction-review",
     "body": [
-      "\"github.copilot.chat.re]view.instructions\": [",
+      "\"github.copilot.chat.review.instructions\": [",
       "  {",
-      "    \"text\": \"Review code like a Principal Engineer. Focus on: 1. Logic errors and edge cases. 2. Performance bottlenecks (O(n) complexity). 3. Security vulnerabilities (injection, sensitive data exposure). 4. TypeScript best practices (avoiding 'any', proper interface usage). 5. SOLID principles and DRY code. If you find an issue, explain WHY it is a problem and provide a refactored solution using modern ES6+ syntax.\"",
+      "    \"text\": \"Review code like a Principal Engineer. Focus on logic correctness and the handling of boundary or edge cases while identifying performance bottlenecks and algorithmic efficiency. Assess the security posture for OWASP risks and potential data leakage. Maintain strict TypeScript adherence by ensuring type safety, banning the use of 'any', and verifying proper type narrowing. Uphold architectural integrity through SOLID principles, DRY patterns, and long-term maintainability while prioritizing DX and readability to ensure intent is clear. For every issue found, explicitly explain the 'Why' regarding architectural or technical debt risk and provide a production-ready refactor using modern ESNext syntax.\"",
       "  }",
       "]",
     ],
@@ -41,10 +41,10 @@
     "body": [
       "\"github.copilot.chat.testGeneration.instructions\": [",
       "  {",
-      "    \"text\": \"Generate tests using the AAA (Arrange-Act-Assert) pattern. Prioritize integration tests for critical user flows and unit tests for complex business logic using the Vitest/Jest and React Testing Library tools available in the workspace. Ensure comprehensive coverage of edge cases, including error boundaries, loading states, and null/empty data scenarios. Mock external dependencies and API calls strictly using a factory pattern where applicable. Aim for readable, maintainable test code that asserts the intended behavior and accessibility of the system, rather than internal implementation details.\"",
+      "    \"text\": \"Act as a Senior QA Testing Engineer. Prioritize integration tests for critical user flows and unit tests for complex business logic, such as Arrange-Act-Assert or Given-When-Then framework using testing libraries. Ensure comprehensive coverage of edge cases, including error boundaries, loading states, and null or empty scenarios. Mock external dependencies and APIs using a consistent factory pattern to maintain isolation. Write resilient, maintainable code that asserts intended behavior and accessibility via React Testing Library, avoiding internal implementation details to ensure stability during refactors.\"",
       "  }",
       "]",
     ],
-    "description": "Generate AAA-pattern test generation instructions",
+    "description": "Generate Copilot test generation instructions",
   },
 }

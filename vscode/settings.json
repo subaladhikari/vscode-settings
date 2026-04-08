@@ -46,6 +46,7 @@
   "editor.letterSpacing": 0.25,
   "editor.lightbulb.enabled": "off",
   "editor.lineHeight": 28,
+  "editor.lineHeight": 28,
   "editor.linkedEditing": true,
   "editor.matchBrackets": "never",
   "editor.minimap.autohide": "mouseover",
@@ -67,7 +68,7 @@
   "editor.suggest.showFunctions": true,
   "editor.suggest.showStatusBar": true,
   "editor.suggest.snippetsPreventQuickSuggestions": false,
-  "editor.suggestFontSize": 20,
+  "editor.suggestFontSize": 18,
   "editor.suggestLineHeight": 28,
   "editor.suggestSelection": "first",
   "editor.tabCompletion": "onlySnippets",
@@ -110,9 +111,7 @@
           }
         },
         {
-          "scope": [
-            "comment.block.documentation entity.name.type.instance"
-          ],
+          "scope": ["comment.block.documentation entity.name.type.instance"],
           "settings": {
             "fontStyle": "italic",
             "foreground": "#73daca"
@@ -127,9 +126,7 @@
           }
         },
         {
-          "scope": [
-            "comment.block.documentation variable"
-          ],
+          "scope": ["comment.block.documentation variable"],
           "settings": {
             "fontStyle": "italic",
             "foreground": "#e0af68"
@@ -139,9 +136,7 @@
     }
   },
   // Emmet settings
-  "emmet.excludeLanguages": [
-    "markdown"
-  ],
+  "emmet.excludeLanguages": ["markdown"],
   "emmet.includeLanguages": {
     "liquid": "html",
     "css": "css",
@@ -203,10 +198,7 @@
     "test/**/out/**": true
   },
   // Git settings
-  "git.branchProtection": [
-    "main",
-    "release/*"
-  ],
+  "git.branchProtection": ["main", "release/*"],
   "git.branchProtectionPrompt": "alwaysCommit",
   "git.branchRandomName.enable": true,
   "git.confirmSync": false,
@@ -247,6 +239,7 @@
   // Inline Chat settings
   "inlineChat.enableV2": true,
   "inlineChat.affordance": "editor",
+  "inlineChat.defaultModel": "GPT-5 mini (copilot)",
   // JavaScript settings
   "javascript.validate.enable": false,
   "javascript.updateImportsOnFileMove.enabled": "always",
@@ -288,7 +281,7 @@
   "terminal.integrated.cursorStyle": "line",
   "terminal.integrated.defaultProfile.windows": "Git Bash",
   "terminal.integrated.fontFamily": "'MesloLGS Nerd Font Mono', monospace",
-  "terminal.integrated.fontSize": 15,
+  "terminal.integrated.fontSize": 16,
   "terminal.integrated.fontWeight": "normal",
   "terminal.integrated.initialHint": false,
   "terminal.integrated.lineHeight": 1.25,
@@ -302,10 +295,7 @@
       ]
     },
     "Git Bash": {
-      "args": [
-        "--login",
-        "-i"
-      ],
+      "args": ["--login", "-i"],
       "path": "C:\\Program Files\\Git\\bin\\bash.exe"
     },
     "PowerShell": {
@@ -409,9 +399,7 @@
   "package-json-upgrade.minorUpgradeColorOverwrite": "#f16979",
   "package-json-upgrade.patchUpgradeColorOverwrite": "#f58f9b",
   // Project Manager settings
-  "projectManager.git.baseFolders": [
-    "C:\\Users\\subal\\Code"
-  ],
+  "projectManager.git.baseFolders": ["C:\\Users\\subal\\Code"],
   // Tailwind CSS
   "tailwindCSS.emmetCompletions": true,
   "tailwindCSS.includeLanguages": {
@@ -441,19 +429,19 @@
   "prettier.bracketSpacing": true,
   "prettier.embeddedLanguageFormatting": "auto",
   "prettier.endOfLine": "lf",
-  "prettier.experimentalOperatorPosition": "start",
+  "prettier.experimentalOperatorPosition": "end",
   "prettier.experimentalTernaries": true,
   "prettier.htmlWhitespaceSensitivity": "css",
   "prettier.insertPragma": false,
   "prettier.jsxSingleQuote": false,
   "prettier.objectWrap": "preserve",
   "prettier.printWidth": 80,
-  "prettier.proseWrap": "always",
+  "prettier.proseWrap": "preserve",
   "prettier.quoteProps": "as-needed",
   "prettier.requirePragma": false,
   "prettier.semi": true,
   "prettier.singleAttributePerLine": true,
-  "prettier.singleQuote": true,
+  "prettier.singleQuote": false,
   "prettier.tabWidth": 2,
   "prettier.trailingComma": "all",
   "prettier.useTabs": false,
