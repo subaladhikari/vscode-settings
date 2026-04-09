@@ -18,15 +18,16 @@
   "editor.bracketPairColorization.enabled": true,
   "editor.codeActionsOnSave": {
     "source.fixAll": "never",
-    "source.organizeImports": "never"
+    "source.organizeImports": "never",
   },
   "editor.cursorBlinking": "solid",
   "editor.cursorSmoothCaretAnimation": "on",
   "editor.cursorStyle": "line",
+  "editor.detectIndentation": true,
   "editor.find.addExtraSpaceOnTop": false,
   "editor.fontFamily": "'Brass Mono Code', 'Brass Mono', monospace",
   "editor.fontLigatures": true,
-  "editor.fontSize": 20,
+  "editor.fontSize": 16,
   "editor.fontWeight": "normal",
   "editor.formatOnPaste": false,
   "editor.formatOnSave": false,
@@ -49,7 +50,7 @@
   "editor.quickSuggestions": {
     "comments": "off",
     "other": "on",
-    "strings": "on"
+    "strings": "on",
   },
   "editor.renderWhitespace": "all",
   "editor.semanticHighlighting.enabled": true,
@@ -61,15 +62,16 @@
   "editor.suggest.showFunctions": true,
   "editor.suggest.showStatusBar": true,
   "editor.suggest.snippetsPreventQuickSuggestions": false,
-  "editor.suggestFontSize": 18,
-  "editor.suggestLineHeight": 28,
+  "editor.suggestFontSize": 16,
+  "editor.suggestLineHeight": 24,
   "editor.suggestSelection": "first",
   "editor.tabCompletion": "onlySnippets",
   "editor.tabSize": 2,
   "editor.trimAutoWhitespace": false,
   "editor.unicodeHighlight.allowedLocales": {
-    "cs": true
+    "cs": true,
   },
+  "editor.unicodeHighlight.invisibleCharacters": false,
   "editor.wordBasedSuggestions": "off",
   "editor.wordWrap": "on",
   "editor.tokenColorCustomizations": {
@@ -86,47 +88,81 @@
             "variable.other.jsdoc",
             "punctuation.definition.comment",
             "punctuation.definition.comment.begin.documentation",
-            "punctuation.definition.comment.end.documentation"
+            "punctuation.definition.comment.end.documentation",
           ],
           "settings": {
             "fontStyle": "italic",
-            "foreground": "#646E9C"
-          }
+            "foreground": "#646E9C",
+          },
         },
         {
           "scope": [
             "comment keyword.codetag.notation",
             "comment.block.documentation keyword",
-            "comment.block.documentation storage.type.class"
+            "comment.block.documentation storage.type.class",
           ],
           "settings": {
-            "foreground": "#bb9af7"
-          }
+            "foreground": "#bb9af7",
+          },
         },
         {
           "scope": ["comment.block.documentation entity.name.type.instance"],
           "settings": {
             "fontStyle": "italic",
-            "foreground": "#73daca"
-          }
+            "foreground": "#73daca",
+          },
         },
         {
           "scope": [
-            "comment.block.documentation entity.name.type punctuation.definition.bracket"
+            "comment.block.documentation entity.name.type punctuation.definition.bracket",
           ],
           "settings": {
-            "foreground": "#bb9af7"
-          }
+            "foreground": "#bb9af7",
+          },
         },
         {
           "scope": ["comment.block.documentation variable"],
           "settings": {
             "fontStyle": "italic",
-            "foreground": "#e0af68"
+            "foreground": "#e0af68",
+          },
+        },
+        {
+          "scope": "keyword.control.flow, keyword.control.import, keyword.control.export",
+          "settings": {
+            "fontStyle": "italic"
+          }
+        },
+        {
+          "scope": "keyword.control.conditional, keyword.control.switch",
+          "settings": {
+            "foreground": "#FFB648",
+            "fontStyle": "italic"
+          }
+        },
+        {
+          "scope": [
+            "storage.modifier.async",
+            "keyword.control.flow.await",
+            "support.class.promise"
+          ],
+          "settings": {
+            "foreground": "#CC77FF",
+          }
+        },
+        {
+          "scope": [
+            "punctuation.destructuring",
+            "variable.other.object.property",
+            "variable.other.property"
+          ],
+          "settings": {
+            "foreground": "#7EFFFF",
+            "fontStyle": ""
           }
         }
-      ]
-    }
+      ],
+    },
   },
   // Emmet settings
   "emmet.excludeLanguages": ["markdown"],
@@ -136,18 +172,20 @@
     "scss": "css",
     "postcss": "css",
     "javascript": "javascriptreact",
-    "typescript": "typescriptreact"
+    "typescript": "typescriptreact",
   },
   "emmet.showExpandedAbbreviation": "never",
+  "emmet.showAbbreviationSuggestions": false,
   "emmet.showSuggestionsAsSnippets": true,
   "emmet.syntaxProfiles": {
-    "javascript": "html, css, jsx"
+    "javascript": "html, css, jsx",
   },
   "emmet.triggerExpansionOnTab": true,
   // Explorer settings
   "explorer.compactFolders": false,
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
+  "explorer.openEditors.visible": 1,
   // Extensions settings
   "extensions.autoUpdate": "onlyEnabledExtensions",
   "extensions.ignoreRecommendations": true,
@@ -157,7 +195,7 @@
     "*.liquid": "liquid",
     ".env*": "dotenv",
     "*.tst": "typescript",
-    "**/*.conversation.json": "jsonc"
+    "**/*.conversation.json": "jsonc",
   },
   "files.autoSave": "off",
   "files.defaultLanguage": "${activeEditorLanguage}",
@@ -172,7 +210,7 @@
     ".build": true,
     ".history": true,
     ".profile-oss": true,
-    "vendor": true
+    "vendor": true,
   },
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
@@ -187,8 +225,12 @@
     "out-vscode-reh/**": true,
     "extensions/**/dist/**": true,
     "extensions/**/out/**": true,
-    "test/**/dist/**": true,
-    "test/**/out/**": true
+    "extensions/terminal-suggest/src/completions/upstream/**": true,
+    "test/smoke/out/**": true,
+    "test/automation/out/**": true,
+    "src/vs/platform/agentHost/common/state/protocol/**": true,
+    "test/integration/browser/out/**": true,
+    // "src/vs/sessions/**": true
   },
   // Git settings
   "git.branchProtection": ["main", "release/*"],
@@ -199,7 +241,7 @@
   "git.diagnosticsCommitHook.sources": {
     "*": "error",
     "ts": "warning",
-    "eslint": "warning"
+    "eslint": "warning",
   },
   "git.enableSmartCommit": true,
   "git.ignoreLimitWarning": true,
@@ -211,7 +253,7 @@
     "*": true,
     "plaintext": false,
     "markdown": false,
-    "scminput": false
+    "scminput": false,
   },
   "github.copilot.chat.languageContext.inline.typescript.enabled": true,
   "github.copilot.chat.languageContext.fix.typescript.enabled": true,
@@ -243,7 +285,7 @@
     "https://www.schemastore.org/": true,
     "https://json.schemastore.org/": true,
     "https://json-schema.org/": true,
-    "https://biomejs.dev": true
+    "https://biomejs.dev": true,
   },
   // Search settings
   "search.exclude": {
@@ -265,8 +307,9 @@
     "**/vendor": true,
     "**/yarn.lock": true,
     ".build/**": true,
-    "cli/target/**": true
+    "cli/target/**": true,
   },
+  "search.useIgnoreFiles": false,
   // General settings
   "security.workspace.trust.untrustedFiles": "open",
   // Terminal settings
@@ -274,7 +317,7 @@
   "terminal.integrated.cursorStyle": "line",
   "terminal.integrated.defaultProfile.windows": "Git Bash",
   "terminal.integrated.fontFamily": "'MesloLGS Nerd Font Mono', monospace",
-  "terminal.integrated.fontSize": 16,
+  "terminal.integrated.fontSize": 15,
   "terminal.integrated.fontWeight": "normal",
   "terminal.integrated.initialHint": false,
   "terminal.integrated.lineHeight": 1.25,
@@ -284,17 +327,17 @@
       "icon": "terminal-cmd",
       "path": [
         "${env:windir}\\Sysnative\\cmd.exe",
-        "${env:windir}\\System32\\cmd.exe"
-      ]
+        "${env:windir}\\System32\\cmd.exe",
+      ],
     },
     "Git Bash": {
       "args": ["--login", "-i"],
-      "path": "C:\\Program Files\\Git\\bin\\bash.exe"
+      "path": "C:\\Program Files\\Git\\bin\\bash.exe",
     },
     "PowerShell": {
       "icon": "terminal-powershell",
-      "source": "PowerShell"
-    }
+      "source": "PowerShell",
+    },
   },
   "terminal.integrated.stickyScroll.enabled": false,
   // TypeScript settings
@@ -323,21 +366,15 @@
   "workbench.colorTheme": "Tokyo Night",
   "workbench.colorCustomizations": {
     "[Tokyo Night]": {
-      "editorIndentGuide.activeBackground1": "#505362",
-      "editorIndentGuide.activeBackground2": "#5b5e6c",
-      "editorIndentGuide.activeBackground3": "#666976",
-      "editorIndentGuide.activeBackground4": "#717380",
-      "editorIndentGuide.activeBackground5": "#717380",
-      "editorIndentGuide.activeBackground6": "#717380",
-      "panelTitle.border": "#29355a"
-    }
+      "panelTitle.border": "#29355a",
+    },
   },
   "workbench.editor.defaultBinaryEditor": "default",
   "workbench.editor.empty.hint": "hidden",
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.editorAssociations": {
     "*.svg": "default",
-    "*.copilotmd": "vscode.markdown.preview.editor"
+    "*.copilotmd": "vscode.markdown.preview.editor",
   },
   "workbench.iconTheme": "material-icon-theme",
   "workbench.productIconTheme": "fluent-icons",
@@ -347,6 +384,7 @@
   "workbench.tree.enableStickyScroll": false,
   "workbench.tree.indent": 8,
   "workbench.tree.renderIndentGuides": "always",
+
   // --- Extension Settings ---
   // Editor config
   "editorconfig.generateAuto": false,
@@ -359,8 +397,8 @@
           "borderStyle": "solid",
           "borderColor": "yellow",
           "borderRadius": "4px",
-          "overviewRulerColor": "white"
-        }
+          "overviewRulerColor": "white",
+        },
       },
       "right": {
         "custom": {
@@ -368,10 +406,10 @@
           "borderStyle": "solid",
           "borderColor": "yellow",
           "borderRadius": "4px",
-          "overviewRulerColor": "white"
-        }
+          "overviewRulerColor": "white",
+        },
       }
-    }
+    },
   },
   // Import Cost
   "importCost.largePackageDarkColor": "#EE4458",
@@ -384,7 +422,7 @@
   "livePreview.useIntegratedBrowser": true,
   // Material Icon Theme
   "material-icon-theme.folders.associations": {
-    "ui": "Theme"
+    "ui": "Theme",
   },
   // Package JSON Upgrade
   "package-json-upgrade.majorUpgradeColorOverwrite": "#EE4458",
@@ -395,10 +433,11 @@
   // Tailwind CSS
   "tailwindCSS.emmetCompletions": true,
   "tailwindCSS.includeLanguages": {
-    "plaintext": "html"
+    "plaintext": "html",
   },
   // Thunder Client
   "thunder-client.requestLayout": "Top/Bottom",
+
   // --- Formatter & Linter Settings ---
   // Biome Extension Settings
   "biome.enabled": false,
@@ -407,12 +446,24 @@
   // ESLint Extension Settings
   "eslint.enable": false,
   "eslint.useFlatConfig": true,
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "html",
+    "markdown",
+    "json",
+    "jsonc",
+    "yaml",
+    "toml"
+  ],
   // Prettier Extension Settings
   "prettier.arrowParens": "always",
   "prettier.bracketSameLine": false,
   "prettier.bracketSpacing": true,
   "prettier.embeddedLanguageFormatting": "auto",
-  "prettier.enable": false,
+  "prettier.enable": true,
   "prettier.endOfLine": "lf",
   "prettier.experimentalOperatorPosition": "start",
   "prettier.experimentalTernaries": false,
@@ -433,16 +484,21 @@
   "prettier.vueIndentScriptAndStyle": false,
 
   // --- Language Specific Settings ---
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css][scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json][jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "[javascript][javascriptreact]": {
     "editor.snippetSuggestions": "top",
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[typescript][typescriptreact]": {
     "editor.snippetSuggestions": "top",
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
-  "[json][jsonc][plaintext][markdown]": {
-    "editor.defaultFormatter": null
-  }
 }
