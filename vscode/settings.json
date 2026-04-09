@@ -471,7 +471,7 @@
   "prettier.insertPragma": false,
   "prettier.jsxSingleQuote": false,
   "prettier.objectWrap": "preserve",
-  "prettier.printWidth": 100,
+  "prettier.printWidth": 80,
   "prettier.proseWrap": "preserve",
   "prettier.quoteProps": "as-needed",
   "prettier.requirePragma": false,
