@@ -1,0 +1,127 @@
+{
+  "nth-child": {
+    "scope": "css,scss",
+    "prefix": "nth-child",
+    "body": [".${1:classname}:nth-child(${2}) {", "  ${0}", "}", ""],
+    "description": "nth-child"
+  },
+  "even": {
+    "scope": "css,scss",
+    "prefix": "even",
+    "body": [".${1:classname}:nth-child(2n) {", "  ${0}", "}", ""],
+    "description": "even"
+  },
+  "odd": {
+    "scope": "css,scss",
+    "prefix": "odd",
+    "body": [".${1:classname}:nth-child(odd) {", "  ${0}", "}", ""],
+    "description": "odd"
+  },
+  "last": {
+    "scope": "css,scss",
+    "prefix": "lastchild",
+    "body": [".${1:classname}:last-child {", "  ${0}", "}", ""],
+    "description": "last"
+  },
+  "first": {
+    "scope": "css,scss",
+    "prefix": "firstchild",
+    "body": [".${1:classname}:first-child {", "  ${0}", "}", ""],
+    "description": "first"
+  },
+  "visited": {
+    "scope": "css,scss",
+    "prefix": "visited",
+    "body": [".${1:classname}:visited {", "  ${0}", "}", ""],
+    "description": "visited"
+  },
+  "disabled": {
+    "scope": "css,scss",
+    "prefix": "disabled",
+    "body": [".${1:classname}:disabled {", "  ${0}", "}", ""],
+    "description": "disabled"
+  },
+  "active": {
+    "scope": "css,scss",
+    "prefix": "active",
+    "body": [".${1:classname}:active {", "  ${0}", "}", ""],
+    "description": "active"
+  },
+  "focus": {
+    "scope": "css,scss",
+    "prefix": "focus",
+    "body": [".${1:classname}:focus {", "  ${0}", "}", ""],
+    "description": "focus"
+  },
+  "hover": {
+    "scope": "css,scss",
+    "prefix": "hover",
+    "body": [".${1:classname}:hover {", "  ${0}", "}", ""],
+    "description": "hover"
+  },
+  "media-min": {
+    "scope": "css,scss",
+    "prefix": "media-min",
+    "body": [
+      "@media only screen and (min-width: $1 ){",
+      "\t $2",
+      "}",
+    ],
+    "description": "Create media queries (min-width)"
+  },
+  "media-max": {
+    "scope": "css,scss",
+    "prefix": "media-max",
+    "body": [
+      "@media only screen and (max-width: $1 ){",
+      "\t $2",
+      "}",
+    ],
+    "description": "Create media queries (max-width)"
+  },
+  "breakpoints": {
+    "scope": "css,scss",
+    "prefix": "breakpoints",
+    "body": [
+      ".${1:classname} {",
+      "  ${2:styles}",
+      "}",
+      "",
+      "@media (min-width: 640px) {",
+      "  .${1:classname} {",
+      "    ${3:styles}",
+      "  }",
+      "}",
+      "",
+      "@media (min-width: 768px) {",
+      "  .${1:classname} {",
+      "    ${4:styles}",
+      "  }",
+      "}",
+      "",
+      "@media (min-width: 1024px) {",
+      "  .${1:classname} {",
+      "    ${5:styles}",
+      "  }",
+      "}",
+      "",
+      "@media (min-width: 1280px) {",
+      "  .${1:classname} {",
+      "    ${0}",
+      "  }",
+      "}",
+      ""
+    ],
+    "description": "All Tailwind Breakpoints"
+  },
+  "comment": {
+    "scope": "css,scss",
+    "prefix": "comment",
+    "body": [
+      "/* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::",
+      "\t \t $1",
+      ":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */",
+    ],
+    "description": "Create a split css comment"
+  },
+}

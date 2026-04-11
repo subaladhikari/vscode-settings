@@ -1,7 +1,7 @@
 {
   "github.copilot.chat.commitMessageGeneration.instructions": [
     {
-      "text": "Follow Conventional Commits: '<type>(scope): short summary in imperative mood>'\n\nBody: Provide a concise summary of the major changes using bullet points. Group related changes together into high-level points rather than listing every individual file. Focus on the 'WHY' and the 'IMPACT' of the logic. Each bullet point must end with a single, contextually appropriate emoji. Keep descriptions punchy and professional.\n\nFooter: Include optional breaking changes or issue references."
+      "text": "Follow Conventional Commits: '<type>(${1:scope}): ${2:short summary in imperative mood (max 50 chars)>}'\\n\\nBody: Use a maximum of 3-4 bullet points. Focus strictly on architectural 'WHY' and 'IMPACT' (e.g., performance, type safety, DX). Avoid listing specific files or trivial implementation details. End each point with a contextually appropriate emoji. Keep the total body length under 300 characters for high scannability.\\n\\nFooter: Include 'Closes #issue' or 'BREAKING CHANGE:' if applicable."
     }
   ]
 }
