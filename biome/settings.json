@@ -1,6 +1,7 @@
 {
   "biome.enabled": true,
   "biome.requireConfiguration": true,
+  "editor.formatOnPaste": false,
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
     "source.fixAll": "never",
@@ -8,7 +9,10 @@
     "source.organizeImports": "never",
     "source.organizeImports.biome": "explicit"
   },
-  "editor.defaultFormatter": null,
+  "js/ts.tsdk.path": "node_modules/typescript/lib",
+  "js/ts.tsdk.promptToUseWorkspaceVersion": true,
+  "prettier.requireConfig": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "[css]": {
     "editor.defaultFormatter": "biomejs.biome"
   },

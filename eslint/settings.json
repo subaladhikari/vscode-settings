@@ -1,6 +1,7 @@
 {
   "eslint.enable": true,
   "eslint.useFlatConfig": true,
+  "editor.formatOnPaste": false,
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
     "source.fixAll": "never",
@@ -8,7 +9,6 @@
     "source.organizeImports": "never",
     "source.organizeImports.eslint": "explicit"
   },
-  "prettier.enable": true,
   "prettier.requireConfig": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "[javascript]": {
