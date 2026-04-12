@@ -1,15 +1,15 @@
 {
   "eslint.enable": true,
-  "eslint.useFlatConfig": true,
   "editor.formatOnPaste": false,
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
     "source.fixAll": "never",
     "source.fixAll.eslint": "explicit",
-    "source.organizeImports": "never",
-    "source.organizeImports.eslint": "explicit"
+    "source.organizeImports": "explicit"
   },
   "prettier.requireConfig": true,
+  "js/ts.tsdk.path": "node_modules/typescript/lib",
+  "js/ts.tsdk.promptToUseWorkspaceVersion": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "[javascript]": {
     "editor.defaultFormatter": "dbaeumer.vscode-eslint"
