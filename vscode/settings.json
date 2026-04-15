@@ -5,6 +5,9 @@
   "breadcrumbs.enabled": true,
   "breadcrumbs.filePath": "on",
   // Chat settings
+  "chat.editor.fontSize": 12,
+  "chat.fontSize": 14,
+  "chat.notifyWindowOnResponseReceived": false,
   "chat.viewSessions.orientation": "stacked",
   // CSS settings
   "css.validate": false,
@@ -23,11 +26,12 @@
   "editor.cursorBlinking": "solid",
   "editor.cursorSmoothCaretAnimation": "on",
   "editor.cursorStyle": "line",
+  "editor.defaultFormatter": null,
   "editor.detectIndentation": true,
   "editor.find.addExtraSpaceOnTop": false,
   "editor.fontFamily": "'Brass Mono Code', 'Brass Mono', monospace",
   "editor.fontLigatures": true,
-  "editor.fontSize": 16,
+  "editor.fontSize": 18,
   "editor.fontWeight": "normal",
   "editor.formatOnPaste": false,
   "editor.formatOnSave": false,
@@ -44,6 +48,8 @@
   "editor.linkedEditing": true,
   "editor.matchBrackets": "never",
   "editor.minimap.autohide": "mouseover",
+  "editor.minimap.enabled": false,
+  "editor.minimap.showSlider": "always",
   "editor.overviewRulerBorder": false,
   "editor.occurrencesHighlightDelay": 0,
   "editor.parameterHints.enabled": false,
@@ -52,11 +58,12 @@
     "other": "on",
     "strings": "on",
   },
+  "editor.quickSuggestionsDelay": 0,
   "editor.renderWhitespace": "all",
   "editor.semanticHighlighting.enabled": true,
+  "editor.snippetSuggestions": "top",
   "editor.stickyScroll.enabled": false,
   "editor.suggest.filterGraceful": false,
-  "editor.suggest.localityBonus": false,
   "editor.suggest.preview": true,
   "editor.suggest.showConstants": true,
   "editor.suggest.showFunctions": true,
@@ -64,8 +71,9 @@
   "editor.suggest.snippetsPreventQuickSuggestions": false,
   "editor.suggestFontSize": 16,
   "editor.suggestLineHeight": 24,
-  "editor.suggestSelection": "first",
-  "editor.tabCompletion": "onlySnippets",
+  "editor.suggestOnTriggerCharacters": true,
+  "editor.suggestSelection": "recentlyUsed",
+  "editor.tabCompletion": "on",
   "editor.tabSize": 2,
   "editor.trimAutoWhitespace": false,
   "editor.unicodeHighlight.allowedLocales": {
@@ -79,90 +87,37 @@
       "textMateRules": [
         {
           "scope": [
-            "comment",
-            "comment.block.documentation",
-            "comment.block.documentation.js",
-            "comment.line.double-slash.js",
-            "storage.type.class.jsdoc",
-            "entity.name.type.instance.jsdoc",
-            "variable.other.jsdoc",
-            "punctuation.definition.comment",
-            "punctuation.definition.comment.begin.documentation",
-            "punctuation.definition.comment.end.documentation",
-          ],
-          "settings": {
-            "fontStyle": "italic",
-            "foreground": "#646E9C",
-          },
-        },
-        {
-          "scope": [
             "comment keyword.codetag.notation",
             "comment.block.documentation keyword",
             "comment.block.documentation storage.type.class",
-          ],
-          "settings": {
-            "foreground": "#bb9af7",
-          },
-        },
-        {
-          "scope": ["comment.block.documentation entity.name.type.instance"],
-          "settings": {
-            "fontStyle": "italic",
-            "foreground": "#73daca",
-          },
-        },
-        {
-          "scope": [
             "comment.block.documentation entity.name.type punctuation.definition.bracket",
           ],
           "settings": {
-            "foreground": "#bb9af7",
-          },
+            "foreground": "#bb9af7"
+          }
         },
         {
-          "scope": ["comment.block.documentation variable"],
+          "scope": [
+            "comment.block.documentation entity.name.type.instance"
+          ],
           "settings": {
-            "fontStyle": "italic",
+            "foreground": "#73daca",
+            "fontStyle": "italic"
+          }
+        },
+        {
+          "scope": [
+            "comment.block.documentation variable",
+            "keyword.control.conditional",
+            "keyword.control.switch",
+            "keyword.control.flow",
+          ],
+          "settings": {
             "foreground": "#e0af68",
-          },
-        },
-        {
-          "scope": "keyword.control.flow, keyword.control.import, keyword.control.export",
-          "settings": {
-            "fontStyle": "italic"
           }
         },
-        {
-          "scope": "keyword.control.conditional, keyword.control.switch",
-          "settings": {
-            "foreground": "#FFB648",
-            "fontStyle": "italic"
-          }
-        },
-        {
-          "scope": [
-            "storage.modifier.async",
-            "keyword.control.flow.await",
-            "support.class.promise"
-          ],
-          "settings": {
-            "foreground": "#CC77FF",
-          }
-        },
-        {
-          "scope": [
-            "punctuation.destructuring",
-            "variable.other.object.property",
-            "variable.other.property"
-          ],
-          "settings": {
-            "foreground": "#7EFFFF",
-            "fontStyle": ""
-          }
-        }
-      ],
-    },
+      ]
+    }
   },
   // Emmet settings
   "emmet.excludeLanguages": ["markdown"],
@@ -174,12 +129,9 @@
     "javascript": "javascriptreact",
     "typescript": "typescriptreact",
   },
-  "emmet.showExpandedAbbreviation": "never",
-  "emmet.showAbbreviationSuggestions": false,
+  "emmet.showExpandedAbbreviation": "always",
+  "emmet.showAbbreviationSuggestions": true,
   "emmet.showSuggestionsAsSnippets": true,
-  "emmet.syntaxProfiles": {
-    "javascript": "html, css, jsx",
-  },
   "emmet.triggerExpansionOnTab": true,
   // Explorer settings
   "explorer.compactFolders": false,
@@ -245,7 +197,6 @@
   },
   "git.enableSmartCommit": true,
   "git.ignoreLimitWarning": true,
-  "git.mergeEditor": true,
   "git.openRepositoryInParentFolders": "always",
   "git.pullBeforeCheckout": true,
   // GitHub Copilot
@@ -263,6 +214,8 @@
   "github.copilot.nextEditSuggestions.enabled": true,
   // Gutter Preview settings
   "gutterpreview.currentColorForSVG": "black",
+  "gutterpreview.imagePreviewMaxHeight": 25,
+  "gutterpreview.imagePreviewMaxWidth": 25,
   // HTML settings
   "html.format.enable": false,
   "html.format.indentInnerHtml": true,
@@ -272,8 +225,6 @@
   "html.validate.scripts": false,
   "html.validate.styles": false,
   // Inline Chat settings
-  "inlineChat.enableV2": true,
-  "inlineChat.affordance": "editor",
   "inlineChat.defaultModel": "GPT-5 mini (copilot)",
   // JavaScript settings
   "javascript.validate.enable": false,
@@ -337,7 +288,7 @@
     "PowerShell": {
       "icon": "terminal-powershell",
       "source": "PowerShell",
-    },
+    }
   },
   "terminal.integrated.stickyScroll.enabled": false,
   // TypeScript settings
@@ -459,11 +410,11 @@
     "toml"
   ],
   // Prettier Extension Settings
+  "prettier.enable": true,
   "prettier.arrowParens": "always",
   "prettier.bracketSameLine": false,
   "prettier.bracketSpacing": true,
   "prettier.embeddedLanguageFormatting": "auto",
-  "prettier.enable": true,
   "prettier.endOfLine": "lf",
   "prettier.experimentalOperatorPosition": "start",
   "prettier.experimentalTernaries": false,
@@ -494,11 +445,9 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[javascript][javascriptreact]": {
-    "editor.snippetSuggestions": "top",
     "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[typescript][typescriptreact]": {
-    "editor.snippetSuggestions": "top",
     "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
 }
