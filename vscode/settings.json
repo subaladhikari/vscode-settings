@@ -7,7 +7,7 @@
   // Chat settings
   "chat.editor.fontSize": 12,
   "chat.fontSize": 14,
-  "chat.notifyWindowOnResponseReceived": false,
+  "chat.notifyWindowOnResponseReceived": "off",
   "chat.viewSessions.orientation": "stacked",
   // CSS settings
   "css.validate": false,
@@ -65,10 +65,7 @@
   "editor.stickyScroll.enabled": false,
   "editor.suggest.filterGraceful": false,
   "editor.suggest.preview": true,
-  "editor.suggest.showConstants": true,
-  "editor.suggest.showFunctions": true,
   "editor.suggest.showStatusBar": true,
-  "editor.suggest.snippetsPreventQuickSuggestions": false,
   "editor.suggestFontSize": 16,
   "editor.suggestLineHeight": 24,
   "editor.suggestOnTriggerCharacters": true,
@@ -86,19 +83,37 @@
     "[Tokyo Night]": {
       "textMateRules": [
         {
+          "name": "Base comments (all comment types)",
           "scope": [
-            "comment keyword.codetag.notation",
-            "comment.block.documentation keyword",
+            "comment",
+            "comment.line",
+            "comment.block",
+            "comment.block.documentation",
+            "punctuation.definition.comment"
+          ],
+          "settings": {
+            "fontStyle": "italic",
+            "foreground": "#646E9C"
+          }
+        },
+        {
+          "name": "JSDoc / documentation types and keywords",
+          "scope": [
             "comment.block.documentation storage.type.class",
-            "comment.block.documentation entity.name.type punctuation.definition.bracket",
+            "comment.block.documentation keyword",
+            "comment.block.documentation entity.name.type",
+            "storage.type.class.jsdoc",
+            "variable.other.jsdoc"
           ],
           "settings": {
             "foreground": "#bb9af7"
           }
         },
         {
+          "name": "JSDoc instance/type annotations",
           "scope": [
-            "comment.block.documentation entity.name.type.instance"
+            "comment.block.documentation entity.name.type.instance",
+            "entity.name.type.instance.jsdoc"
           ],
           "settings": {
             "foreground": "#73daca",
@@ -106,16 +121,16 @@
           }
         },
         {
+          "name": "Control keywords (code, NOT comments)",
           "scope": [
-            "comment.block.documentation variable",
             "keyword.control.conditional",
             "keyword.control.switch",
-            "keyword.control.flow",
+            "keyword.control.flow"
           ],
           "settings": {
-            "foreground": "#e0af68",
+            "foreground": "#e0af68"
           }
-        },
+        }
       ]
     }
   },
@@ -137,7 +152,6 @@
   "explorer.compactFolders": false,
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
-  "explorer.openEditors.visible": 1,
   // Extensions settings
   "extensions.autoUpdate": "onlyEnabledExtensions",
   "extensions.ignoreRecommendations": true,
@@ -226,9 +240,9 @@
   "html.validate.styles": false,
   // Inline Chat settings
   "inlineChat.defaultModel": "GPT-5 mini (copilot)",
-  // JavaScript settings
-  "javascript.validate.enable": false,
-  "javascript.updateImportsOnFileMove.enabled": "always",
+  // Js/Ts settings
+  "js/ts.validate.enabled": false,
+  "js/ts.updateImportsOnFileMove.enabled": "always",
   // JSON settings
   "json.schemaDownload.trustedDomains": {
     "https://schemastore.azurewebsites.net/": true,
@@ -323,6 +337,7 @@
   "workbench.editor.defaultBinaryEditor": "default",
   "workbench.editor.empty.hint": "hidden",
   "workbench.editor.enablePreviewFromQuickOpen": false,
+  "workbench.editor.useModal": "off",
   "workbench.editorAssociations": {
     "*.svg": "default",
     "*.copilotmd": "vscode.markdown.preview.editor",
@@ -371,6 +386,8 @@
   "importCost.smallPackageLightColor": "#22C55E",
   // Live Preview settings
   "livePreview.useIntegratedBrowser": true,
+  // Live Server
+  "liveServer.settings.donotShowInfoMsg": true,
   // Material Icon Theme
   "material-icon-theme.folders.associations": {
     "ui": "Theme",
@@ -396,6 +413,7 @@
   "biome.suggestInstallingGlobally": false,
   // ESLint Extension Settings
   "eslint.enable": false,
+  "eslint.codeActionsOnSave.mode": "problems",
   "eslint.useFlatConfig": true,
   "eslint.validate": [
     "javascript",
