@@ -1,86 +1,122 @@
 {
-  "nth-child": {
-    "scope": "css,scss",
-    "prefix": "nth-child",
-    "body": [".${1:classname}:nth-child(${2}) {", "  ${0}", "}", ""],
-    "description": "nth-child"
-  },
-  "even": {
-    "scope": "css,scss",
-    "prefix": "even",
-    "body": [".${1:classname}:nth-child(2n) {", "  ${0}", "}", ""],
-    "description": "even"
-  },
-  "odd": {
-    "scope": "css,scss",
-    "prefix": "odd",
-    "body": [".${1:classname}:nth-child(odd) {", "  ${0}", "}", ""],
-    "description": "odd"
-  },
-  "last": {
-    "scope": "css,scss",
-    "prefix": "lastchild",
-    "body": [".${1:classname}:last-child {", "  ${0}", "}", ""],
-    "description": "last"
-  },
-  "first": {
-    "scope": "css,scss",
-    "prefix": "firstchild",
-    "body": [".${1:classname}:first-child {", "  ${0}", "}", ""],
-    "description": "first"
-  },
-  "visited": {
-    "scope": "css,scss",
-    "prefix": "visited",
-    "body": [".${1:classname}:visited {", "  ${0}", "}", ""],
-    "description": "visited"
-  },
-  "disabled": {
-    "scope": "css,scss",
-    "prefix": "disabled",
-    "body": [".${1:classname}:disabled {", "  ${0}", "}", ""],
-    "description": "disabled"
+  "!": {
+    "scope": "css,scss,tailwindcss",
+    "prefix": "!",
+    "body": [".${1:classname} {", "  ${0}", "}"],
+    "description": "CSS Class selector with braces"
   },
   "active": {
-    "scope": "css,scss",
+    "scope": "css,scss,tailwindcss",
     "prefix": "active",
     "body": [".${1:classname}:active {", "  ${0}", "}", ""],
-    "description": "active"
+    "description": "CSS :active pseudo-class"
+  },
+  "disabled": {
+    "scope": "css,scss,tailwindcss",
+    "prefix": "disabled",
+    "body": [".${1:classname}:disabled {", "  ${0}", "}", ""],
+    "description": "CSS :disabled pseudo-class"
+  },
+  "even": {
+    "scope": "css,scss,tailwindcss",
+    "prefix": "even",
+    "body": [".${1:classname}:nth-child(2n) {", "  ${0}", "}", ""],
+    "description": "CSS :nth-child(even) selector"
+  },
+  "first": {
+    "scope": "css,scss,tailwindcss",
+    "prefix": "first-child",
+    "body": [".${1:classname}:first-child {", "  ${0}", "}", ""],
+    "description": "CSS :first-child selector"
   },
   "focus": {
-    "scope": "css,scss",
+    "scope": "css,scss,tailwindcss",
     "prefix": "focus",
     "body": [".${1:classname}:focus {", "  ${0}", "}", ""],
-    "description": "focus"
+    "description": "CSS :focus pseudo-class"
   },
   "hover": {
-    "scope": "css,scss",
+    "scope": "css,scss,tailwindcss",
     "prefix": "hover",
     "body": [".${1:classname}:hover {", "  ${0}", "}", ""],
-    "description": "hover"
+    "description": "CSS :hover pseudo-class"
   },
-  "media-min": {
-    "scope": "css,scss",
-    "prefix": "media-min",
-    "body": [
-      "@media only screen and (min-width: $1 ){",
-      "\t $2",
-      "}",
-    ],
-    "description": "Create media queries (min-width)"
+  "include": {
+    "scope": "css,scss,tailwindcss",
+    "prefix": "include",
+    "body": "@include ${0:mixin};",
+    "description": "Sass @include directive"
+  },
+  "import": {
+    "scope": "css,scss,tailwindcss",
+    "prefix": "import",
+    "body": "@import '${0:filename}';",
+    "description": "CSS/Sass @import directive"
+  },
+  "keyframes": {
+    "scope": "css,scss,tailwindcss",
+    "prefix": "keyframe",
+    "body": "@keyframes ${1:name} {\n  $0\n}",
+    "description": "CSS @keyframes animation rule"
+  },
+  "last": {
+    "scope": "css,scss,tailwindcss",
+    "prefix": "last-child",
+    "body": [".${1:classname}:last-child {", "  ${0}", "}", ""],
+    "description": "CSS :last-child selector"
+  },
+  "media": {
+    "scope": "css,scss,tailwindcss",
+    "prefix": "media",
+    "body": "@media screen and (${1:max-width: 300px}) {\n  $0\n}",
+    "description": "Generic CSS @media query"
   },
   "media-max": {
-    "scope": "css,scss",
+    "scope": "css,scss,tailwindcss",
     "prefix": "media-max",
     "body": [
-      "@media only screen and (max-width: $1 ){",
-      "\t $2",
-      "}",
+      "@media (max-width: $1) {",
+      "\t $0",
+      "}"
     ],
-    "description": "Create media queries (max-width)"
+    "description": "CSS @media query (max-width)"
+  },
+  "media-min": {
+    "scope": "css,scss,tailwindcss",
+    "prefix": "media-min",
+    "body": [
+      "@media (min-width: $1) {",
+      "\t $0",
+      "}"
+    ],
+    "description": "CSS @media query (min-width)"
+  },
+  "mixin": {
+    "scope": "css,scss,tailwindcss",
+    "prefix": "mixin",
+    "body": "@mixin ${1:name} {\n  $0\n}",
+    "description": "Sass @mixin definition"
+  },
+  "nth-child": {
+    "scope": "css,scss,tailwindcss",
+    "prefix": "nth-child",
+    "body": [".${1:classname}:nth-child(${2}) {", "  ${0}", "}", ""],
+    "description": "CSS :nth-child(n) selector"
+  },
+  "odd": {
+    "scope": "css,scss,tailwindcss",
+    "prefix": "odd",
+    "body": [".${1:classname}:nth-child(odd) {", "  ${0}", "}", ""],
+    "description": "CSS :nth-child(odd) selector"
+  },
+  "visited": {
+    "scope": "css,scss,tailwindcss",
+    "prefix": "visited",
+    "body": [".${1:classname}:visited {", "  ${0}", "}", ""],
+    "description": "CSS :visited pseudo-class"
   },
   "breakpoints": {
-    "scope": "css,scss",
+    "scope": "css,scss,tailwindcss",
     "prefix": "breakpoints",
     "body": [
       ".${1:classname} {",
@@ -112,16 +148,52 @@
       "}",
       ""
     ],
-    "description": "All Tailwind Breakpoints"
+    "description": "Full responsive Tailwind CSS breakpoints"
   },
-  "comment": {
-    "scope": "css,scss",
-    "prefix": "comment",
+  "divider": {
+    "scope": "css,scss,tailwindcss",
+    "prefix": "divider",
     "body": [
-      "/* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::",
-      "\t \t $1",
-      ":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */",
+      "/*---------------------------------------------------------------------------*/",
     ],
-    "description": "Create a split css comment"
+    "description": "Comment horizontal divider"
   },
+  "header": {
+    "scope": "css,scss,tailwindcss",
+    "prefix": "header",
+    "body": [
+      "/*---------------------------------------------------------------------------",
+      "  ${1:SECTION_TITLE}",
+      "  Description: ${2:What this section governs (e.g., Global Typography)}",
+      "  ---------------------------------------------------------------------------*/",
+      "$0"
+    ],
+    "description": "Comment main header"
+  },
+  "comment-subsection": {
+    "scope": "css,scss,tailwindcss",
+    "prefix": "section",
+    "body": [
+      "/* ${1:Subsection Title}",
+      "  ---------------------------------------------------------------------------*/",
+      "$0"
+    ],
+    "description": "Comment section header"
+  },
+  "comment-todo": {
+    "scope": "css,scss,tailwindcss",
+    "prefix": "todo",
+    "body": "/* TODO: ${1:task_description} - @${2:username} - ${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE} */",
+    "description": "Standardized TODO with user and date"
+  },
+  "comment-hack": {
+    "scope": "css,scss,tailwindcss",
+    "prefix": "hack",
+    "body": [
+      "/* HACK: ${1:Explanation of why this non-standard code exists}",
+      "   Reference: ${2:Ticket_URL_or_Issue_#}",
+      "   Target: ${3:Browser/Version} */"
+    ],
+    "description": "Critical 'Hack/Workaround' documentation"
+  }
 }

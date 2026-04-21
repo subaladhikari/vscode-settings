@@ -241,7 +241,9 @@
   // Inline Chat settings
   "inlineChat.defaultModel": "GPT-5 mini (copilot)",
   // Js/Ts settings
+  "js/ts.experimental.useTsgo": true,
   "js/ts.validate.enabled": false,
+  "js/ts.preferences.quoteStyle": "single",
   "js/ts.updateImportsOnFileMove.enabled": "always",
   // JSON settings
   "json.schemaDownload.trustedDomains": {
@@ -286,24 +288,6 @@
   "terminal.integrated.fontWeight": "normal",
   "terminal.integrated.initialHint": false,
   "terminal.integrated.lineHeight": 1.25,
-  "terminal.integrated.profiles.windows": {
-    "Command Prompt": {
-      "args": [],
-      "icon": "terminal-cmd",
-      "path": [
-        "${env:windir}\\Sysnative\\cmd.exe",
-        "${env:windir}\\System32\\cmd.exe",
-      ],
-    },
-    "Git Bash": {
-      "args": ["--login", "-i"],
-      "path": "C:\\Program Files\\Git\\bin\\bash.exe",
-    },
-    "PowerShell": {
-      "icon": "terminal-powershell",
-      "source": "PowerShell",
-    }
-  },
   "terminal.integrated.stickyScroll.enabled": false,
   // TypeScript settings
   "typescript.format.enable": true,
