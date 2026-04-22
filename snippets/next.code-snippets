@@ -1,40 +1,6 @@
 {
-  // NEXTJS HOOKS
-  "useRouter Hook": {
-    "scope": "javascript,typescript,javascriptreact,typescriptreact",
-    "prefix": "useRouter",
-    "description": "Next.js useRouter from next/navigation — inline",
-    "body": [
-      "const router = useRouter();"
-    ]
-  },
-  "usePathname Hook": {
-    "scope": "javascript,typescript,javascriptreact,typescriptreact",
-    "prefix": "usePathname",
-    "description": "Next.js usePathname from next/navigation — inline",
-    "body": [
-      "const pathname = usePathname();"
-    ]
-  },
-  "useSearchParams Hook": {
-    "scope": "javascript,typescript,javascriptreact,typescriptreact",
-    "prefix": "useSearchParams",
-    "description": "Next.js useSearchParams from next/navigation — inline",
-    "body": [
-      "const searchParams = useSearchParams();"
-    ]
-  },
-  "useParams Hook": {
-    "scope": "javascript,typescript,javascriptreact,typescriptreact",
-    "prefix": "useParams",
-    "description": "Next.js useParams from next/navigation — inline",
-    "body": [
-      "const params = useParams<{ ${1:slug}: string }>();"
-    ]
-  },
-  // NEXTJS SNIPPETS
   "Next.js Server Component": {
-    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "scope": "typescript,typescriptreact",
     "prefix": "nextsc",
     "description": "Next.js async Server Component (App Router)",
     "body": [
@@ -54,7 +20,7 @@
     ]
   },
   "Next.js Client Component": {
-    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "scope": "typescript,typescriptreact",
     "prefix": "nextcc",
     "description": "Next.js Client Component with 'use client'",
     "body": [
@@ -76,7 +42,7 @@
     ]
   },
   "Next.js Page": {
-    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "scope": "typescript,typescriptreact",
     "prefix": "nextpage",
     "description": "Next.js App Router page.tsx — async params (Next.js 15+)",
     "body": [
@@ -99,7 +65,7 @@
     ]
   },
   "Next.js Layout": {
-    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "scope": "typescript,typescriptreact",
     "prefix": "nextlayout",
     "description": "Next.js App Router layout.tsx with typed Metadata",
     "body": [
@@ -123,7 +89,7 @@
     ]
   },
   "Next.js Loading": {
-    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "scope": "typescript,typescriptreact",
     "prefix": "nextloading",
     "description": "Next.js App Router loading.tsx",
     "body": [
@@ -139,7 +105,7 @@
     ]
   },
   "Next.js Error": {
-    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "scope": "typescript,typescriptreact",
     "prefix": "nexterror",
     "description": "Next.js App Router error.tsx",
     "body": [
@@ -169,7 +135,7 @@
     ]
   },
   "Next.js Not Found": {
-    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "scope": "typescript,typescriptreact",
     "prefix": "nextnotfound",
     "description": "Next.js App Router not-found.tsx",
     "body": [
@@ -189,7 +155,7 @@
     ]
   },
   "Next.js Forbidden": {
-    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "scope": "typescript,typescriptreact",
     "prefix": "nextforbidden",
     "description": "Next.js App Router forbidden.tsx (Next.js 15+)",
     "body": [
@@ -209,7 +175,7 @@
     ]
   },
   "Next.js Unauthorized": {
-    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "scope": "typescript,typescriptreact",
     "prefix": "nextunauthorized",
     "description": "Next.js App Router unauthorized.tsx (Next.js 15+)",
     "body": [
@@ -229,7 +195,7 @@
     ]
   },
   "Next.js Route Handler": {
-    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "scope": "typescript,typescriptreact",
     "prefix": "nextroute",
     "description": "Next.js route.ts with GET + POST (Next.js 15+)",
     "body": [
@@ -256,7 +222,7 @@
     ]
   },
   "Next.js Dynamic Route Handler": {
-    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "scope": "typescript,typescriptreact",
     "prefix": "nextrouteparam",
     "description": "Next.js dynamic route.ts with async params (Next.js 15+)",
     "body": [
@@ -278,7 +244,7 @@
     ]
   },
   "Next.js Cookies": {
-    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "scope": "typescript,typescriptreact",
     "prefix": "nextcookies",
     "description": "Next.js async cookies() from next/headers (Next.js 15+)",
     "body": [
@@ -299,7 +265,7 @@
     ]
   },
   "Next.js Headers": {
-    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "scope": "typescript,typescriptreact",
     "prefix": "nextheaders",
     "description": "Next.js async headers() from next/headers (Next.js 15+)",
     "body": [
@@ -320,7 +286,7 @@
     ]
   },
   "Next.js useRouter": {
-    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "scope": "typescript,typescriptreact",
     "prefix": "nextrouter",
     "description": "Next.js useRouter from next/navigation",
     "body": [
@@ -346,7 +312,7 @@
     ]
   },
   "Next.js usePathname + useSearchParams": {
-    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "scope": "typescript,typescriptreact",
     "prefix": "nextpathname",
     "description": "Next.js usePathname and useSearchParams",
     "body": [
@@ -373,7 +339,7 @@
     ]
   },
   "Next.js useParams": {
-    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "scope": "typescript,typescriptreact",
     "prefix": "nextparams",
     "description": "Next.js useParams from next/navigation",
     "body": [
@@ -399,7 +365,7 @@
     ]
   },
   "Next.js Server Action": {
-    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "scope": "typescript,typescriptreact",
     "prefix": "nextaction",
     "description": "Next.js Server Action with 'use server'",
     "body": [
@@ -416,7 +382,7 @@
     ]
   },
   "Next.js generateMetadata": {
-    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "scope": "typescript,typescriptreact",
     "prefix": "nextmetadata",
     "description": "Next.js dynamic generateMetadata — async params (Next.js 15+)",
     "body": [
@@ -433,7 +399,7 @@
     ]
   },
   "Next.js after()": {
-    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "scope": "typescript,typescriptreact",
     "prefix": "nextafter",
     "description": "Next.js after() for post-response work (Next.js 15+)",
     "body": [
@@ -455,7 +421,7 @@
     ]
   },
   "Next.js forbidden() + unauthorized()": {
-    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "scope": "typescript,typescriptreact",
     "prefix": "nextauthcheck",
     "description": "Next.js auth check using forbidden() and unauthorized() (Next.js 15+)",
     "body": [
@@ -478,7 +444,7 @@
     ]
   },
   "Next.js use cache": {
-    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "scope": "typescript,typescriptreact",
     "prefix": "nextusecache",
     "description": "[Next.js 16+ stable / 15 experimental] 'use cache' with cacheLife and cacheTag",
     "body": [
@@ -500,7 +466,7 @@
     ]
   },
   "Next.js proxy.ts": {
-    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "scope": "typescript,typescriptreact",
     "prefix": "nextproxy",
     "description": "[Next.js 16+ only] proxy.ts — replaces deprecated middleware.ts",
     "body": [
@@ -517,7 +483,7 @@
     ]
   },
   "Next.js Form": {
-    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "scope": "typescript,typescriptreact",
     "prefix": "nextform",
     "description": "Next.js next/form with prefetching and progressive enhancement",
     "body": [

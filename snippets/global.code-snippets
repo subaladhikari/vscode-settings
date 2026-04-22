@@ -105,6 +105,15 @@
     ],
     "description": "Export default named function",
   },
+  "Immediately-invoked Function Expression": {
+    "prefix": "iife",
+    "body": [
+      "(function(${1:window}, ${2:document}) {",
+      "\t${3:// body}",
+      "})(${1:window}, ${2:document});"
+    ],
+    "description": "IIFE - Immediately-invoked Function Expression"
+  },
   // Time & Interval
   "Set Interval": {
     "scope": "javascript,typescript,javascriptreact,typescriptreact",
@@ -259,34 +268,6 @@
     "body": ["const { $2 } = ${1:object};"],
     "description": "Object destructuring",
   },
-  // FUNCTION SNIPPETS
-  "Class Method Function": {
-    "scope": "javascript,typescript,javascriptreact,typescriptreact",
-    "prefix": "classmethod",
-    "body": ["${1:methodName} = (${2:params}) => {", "  $0", "};"],
-    "description": "Class property method function",
-  },
-  "Anonymous Function": {
-    "scope": "javascript,typescript,javascriptreact,typescriptreact",
-    "prefix": "anonfn",
-    "body": ["(${1:params}) => { $0 }"],
-    "description": "Anonymous arrow function",
-  },
-  "Named Arrow Function": {
-    "scope": "javascript,typescript,javascriptreact,typescriptreact",
-    "prefix": "namedafn",
-    "body": ["const ${1:functionName} = (${2:params}) => {", "  $0", "};"],
-    "description": "Named arrow function",
-  },
-  "Immediately-invoked Function Expression": {
-    "prefix": "iife",
-    "body": [
-      "(function(${1:window}, ${2:document}) {",
-      "\t${3:// body}",
-      "})(${1:window}, ${2:document});"
-    ],
-    "description": "IIFE - Immediately-invoked Function Expression"
-  },
   // ASYNC/AWAIT SNIPPETS
   "Async Named Function": {
     "scope": "javascript,typescript,javascriptreact,typescriptreact",
@@ -309,6 +290,7 @@
     ],
     "description": "Async arrow function expression"
   },
+  // PROMISE SNIPPETS
   "New Promise": {
     "scope": "javascript,typescript,javascriptreact,typescriptreact",
     "prefix": "promise",
@@ -515,9 +497,8 @@
     ],
     "description": "Convert an object into a pretty-printed JSON string"
   },
-  // Copyright Header Snippet
-  "Copyright Header": {
-    "scope": "javascript,typescript,javascriptreact,typescriptreact,css",
+  // Copyright Snippet
+  "Copyright": {
     "prefix": "copyright",
     "body": [
       "/*---------------------------------------------------------------------------------------------",
