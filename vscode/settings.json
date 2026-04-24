@@ -376,7 +376,6 @@
   // --- Formatter & Linter Settings ---
   // Biome Extension Settings
   "biome.enabled": false,
-  "biome.requireConfiguration": true,
   "biome.suggestInstallingGlobally": false,
   // OXC Extension Settings
   "oxc.enable": false,

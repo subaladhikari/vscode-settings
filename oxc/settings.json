@@ -1,9 +1,9 @@
 {
   "js/ts.tsdk.path": "node_modules/typescript/lib",
   "js/ts.tsdk.promptToUseWorkspaceVersion": true,
-  "oxc.enable": false,
-  "oxc.enable.oxfmt": false,
-  "oxc.enable.oxlint": false,
+  "oxc.enable": true,
+  "oxc.enable.oxfmt": true,
+  "oxc.enable.oxlint": true,
   "editor.formatOnPaste": false,
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
