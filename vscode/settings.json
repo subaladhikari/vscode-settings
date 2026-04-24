@@ -9,13 +9,15 @@
   "chat.fontSize": 14,
   "chat.notifyWindowOnResponseReceived": "off",
   "chat.viewSessions.orientation": "stacked",
+  "chat.planAgent.defaultModel": "GPT-4.1 (copilot)",
+  "chat.exploreAgent.defaultModel": "GPT-4.1 (copilot)",
   // CSS settings
   "css.validate": false,
   "css.format.spaceAroundSelectorSeparator": true,
   // Diff-Editor settings
   "diffEditor.ignoreTrimWhitespace": false,
   // Editor settings
-  "editor.acceptSuggestionOnEnter": "on",
+  "editor.acceptSuggestionOnEnter": "off",
   "editor.accessibilitySupport": "off",
   "editor.autoIndent": "none",
   "editor.bracketPairColorization.enabled": true,
@@ -370,6 +372,10 @@
   "tailwindCSS.includeLanguages": {
     "plaintext": "html",
   },
+  // Shopify Liquid
+  "themeCheck.checkOnOpen": true,
+  "themeCheck.checkOnChange": true,
+  "themeCheck.checkOnSave": false,
   // Thunder Client
   "thunder-client.requestLayout": "Top/Bottom",
 
