@@ -213,6 +213,7 @@
   "git.ignoreLimitWarning": true,
   "git.openRepositoryInParentFolders": "always",
   "git.pullBeforeCheckout": true,
+  "git.terminalAuthentication": false,
   // GitHub Copilot
   "github.copilot.enable": {
     "*": true,
@@ -235,7 +236,7 @@
   "html.format.indentInnerHtml": true,
   "html.format.preserveNewLines": true,
   "html.format.wrapAttributes": "force-expand-multiline",
-  "html.format.wrapLineLength": 80,
+  "html.format.wrapLineLength": 100,
   "html.validate.scripts": false,
   "html.validate.styles": false,
   // Inline Chat settings
@@ -289,24 +290,6 @@
   "terminal.integrated.initialHint": false,
   "terminal.integrated.lineHeight": 1.25,
   "terminal.integrated.stickyScroll.enabled": false,
-  // TypeScript settings
-  "typescript.format.enable": true,
-  "typescript.experimental.useTsgo": true,
-  "typescript.format.insertSpaceAfterCommaDelimiter": true,
-  "typescript.format.insertSpaceAfterSemicolonInForStatements": true,
-  "typescript.format.insertSpaceBeforeAndAfterBinaryOperators": true,
-  "typescript.format.insertSpaceAfterKeywordsInControlFlowStatements": true,
-  "typescript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": true,
-  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis": false,
-  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": false,
-  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingTemplateStringBraces": false,
-  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingEmptyBraces": true,
-  "typescript.format.insertSpaceBeforeFunctionParenthesis": false,
-  "typescript.format.placeOpenBraceOnNewLineForFunctions": false,
-  "typescript.format.placeOpenBraceOnNewLineForControlBlocks": false,
-  "typescript.preferences.quoteStyle": "single",
-  // General settings
-  "update.mode": "none",
   // General settings
   "window.confirmSaveUntitledWorkspace": false,
   "window.newWindowProfile": "Default",
@@ -327,7 +310,7 @@
     "*.copilotmd": "vscode.markdown.preview.editor",
   },
   "workbench.iconTheme": "material-icon-theme",
-  "workbench.productIconTheme": "fluent-icons",
+  "workbench.productIconTheme": "material-product-icons",
   "workbench.secondarySideBar.defaultVisibility": "hidden",
   "workbench.secondarySideBar.showLabels": false,
   "workbench.tips.enabled": false,
@@ -395,10 +378,13 @@
   "biome.enabled": false,
   "biome.requireConfiguration": true,
   "biome.suggestInstallingGlobally": false,
+  // OXC Extension Settings
+  "oxc.enable": false,
+  "oxc.enable.oxfmt": false,
+  "oxc.enable.oxlint": false,
   // ESLint Extension Settings
   "eslint.enable": false,
   "eslint.codeActionsOnSave.mode": "problems",
-  "eslint.useFlatConfig": true,
   "eslint.validate": [
     "javascript",
     "javascriptreact",
