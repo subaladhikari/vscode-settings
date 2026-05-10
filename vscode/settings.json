@@ -9,15 +9,17 @@
   "chat.fontSize": 14,
   "chat.notifyWindowOnResponseReceived": "off",
   "chat.viewSessions.orientation": "stacked",
-  "chat.planAgent.defaultModel": "GPT-4.1 (copilot)",
-  "chat.exploreAgent.defaultModel": "GPT-4.1 (copilot)",
+  "chat.tips.enabled": false,
+  "chat.planAgent.defaultModel": "GPT-5 mini (copilot)",
+  "chat.exploreAgent.defaultModel": "GPT-5 mini (copilot)",
+  "inlineChat.defaultModel": "Raptor mini (Preview) (copilot)",
   // CSS settings
   "css.validate": false,
   "css.format.spaceAroundSelectorSeparator": true,
   // Diff-Editor settings
   "diffEditor.ignoreTrimWhitespace": false,
   // Editor settings
-  "editor.acceptSuggestionOnEnter": "off",
+  "editor.acceptSuggestionOnEnter": "on",
   "editor.accessibilitySupport": "off",
   "editor.autoIndent": "none",
   "editor.bracketPairColorization.enabled": true,
@@ -241,8 +243,6 @@
   "html.format.wrapLineLength": 100,
   "html.validate.scripts": false,
   "html.validate.styles": false,
-  // Inline Chat settings
-  "inlineChat.defaultModel": "GPT-5 mini (copilot)",
   // Js/Ts settings
   "js/ts.experimental.useTsgo": true,
   "js/ts.validate.enabled": false,
@@ -286,13 +286,14 @@
   "terminal.integrated.cursorBlinking": false,
   "terminal.integrated.cursorStyle": "line",
   "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "terminal.integrated.enablePersistentSessions": false,
   "terminal.integrated.fontFamily": "'MesloLGS Nerd Font Mono', monospace",
   "terminal.integrated.fontSize": 15,
   "terminal.integrated.fontWeight": "normal",
   "terminal.integrated.initialHint": false,
   "terminal.integrated.lineHeight": 1.25,
   "terminal.integrated.stickyScroll.enabled": false,
-  // General settings
+  // Window settings
   "window.confirmSaveUntitledWorkspace": false,
   "window.newWindowProfile": "Default",
   // Workbench settings
@@ -321,6 +322,8 @@
   "workbench.tree.renderIndentGuides": "always",
 
   // --- Extension Settings ---
+  // Code Spell Checker
+  "cSpell.enabled": false,
   // Editor config
   "editorconfig.generateAuto": false,
   // Highlight matching tags
@@ -355,8 +358,6 @@
   "importCost.smallPackageLightColor": "#22C55E",
   // Live Preview settings
   "livePreview.useIntegratedBrowser": true,
-  // Live Server
-  "liveServer.settings.donotShowInfoMsg": true,
   // Material Icon Theme
   "material-icon-theme.folders.associations": {
     "ui": "Theme",
@@ -390,18 +391,6 @@
   // ESLint Extension Settings
   "eslint.enable": false,
   "eslint.codeActionsOnSave.mode": "problems",
-  "eslint.validate": [
-    "javascript",
-    "javascriptreact",
-    "typescript",
-    "typescriptreact",
-    "html",
-    "markdown",
-    "json",
-    "jsonc",
-    "yaml",
-    "toml"
-  ],
   // Prettier Extension Settings
   "prettier.enable": true,
   "prettier.arrowParens": "always",
@@ -416,7 +405,7 @@
   "prettier.jsxSingleQuote": false,
   "prettier.objectWrap": "preserve",
   "prettier.printWidth": 100,
-  "prettier.proseWrap": "always",
+  "prettier.proseWrap": "preserve",
   "prettier.quoteProps": "as-needed",
   "prettier.requirePragma": false,
   "prettier.semi": true,
