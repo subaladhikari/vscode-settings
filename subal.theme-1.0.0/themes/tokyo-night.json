@@ -32,10 +32,10 @@
   "semanticClass": "tokyo-night",
   "colors": {
     "activityBar.background": "#16161e",
-    "activityBar.border": "#16161e",
+    "activityBar.border": "#292e42",
     "activityBar.foreground": "#787c99",
-    "activityBar.activeBorder": "#3b3e52",
     "activityBar.activeBackground": "#101014",
+    "activityBar.activeBorder": "#292e42",
     "activityBar.inactiveForeground": "#3b3e52",
     "activityBarBadge.background": "#3d59a1",
     "activityBarBadge.foreground": "#fff",
@@ -118,15 +118,15 @@
     "editor.wordHighlightStrongBackground": "#515c7e55",
     "editor.indentGuide.background": "#202437",
     "editor.indentGuide.activeBackground": "#2e3347",
-    "editorBracketHighlight.foreground1": "#698cd6", //"#7AA2F7",
-    "editorBracketHighlight.foreground2": "#68b3de", //"#7DCFFF",
-    "editorBracketHighlight.foreground3": "#9a7ecc", //"#BB9AF7",
-    "editorBracketHighlight.foreground4": "#25aac2", //"#2AC3DE",
-    "editorBracketHighlight.foreground5": "#80a856", //"#9ECE6A",
-    "editorBracketHighlight.foreground6": "#c49a5a", //"#e0af68",
+    "editorBracketHighlight.foreground1": "#698cd6",
+    "editorBracketHighlight.foreground2": "#68b3de",
+    "editorBracketHighlight.foreground3": "#9a7ecc",
+    "editorBracketHighlight.foreground4": "#25aac2",
+    "editorBracketHighlight.foreground5": "#80a856",
+    "editorBracketHighlight.foreground6": "#c49a5a",
     "editorBracketHighlight.unexpectedBracket.foreground": "#db4b4b",
     "editorBracketMatch.background": "#16161e",
-    "editorBracketMatch.border": "#42465d", //"#363b54",
+    "editorBracketMatch.border": "#292e42",
     "editorBracketPairGuide.activeBackground1": "#698cd6",
     "editorBracketPairGuide.activeBackground2": "#68b3de",
     "editorBracketPairGuide.activeBackground3": "#9a7ecc",
@@ -726,7 +726,7 @@
       "name": "Variable Array Key",
       "scope": "meta.array.literal variable",
       "settings": {
-        "foreground": "#7dcfff" //"#73daca"
+        "foreground": "#7dcfff"
       }
     },
     {
@@ -822,7 +822,7 @@
         "meta.function.parameter variable"
       ],
       "settings": {
-        "foreground": "#e0af68" //#73daca
+        "foreground": "#e0af68"
       }
     },
     {
@@ -962,7 +962,7 @@
       "name": "CSS Punctuation",
       "scope": "meta.property-list",
       "settings": {
-        "foreground": "#9abdf5" //"#e0af68"
+        "foreground": "#9abdf5"
       }
     },
     {
@@ -1594,13 +1594,47 @@
     },
     {
       "name": "Tokyo Gogh Warm Constants",
-      "scope": ["constant.numeric", "constant.language", "variable.other.constant"],
+      "scope": [
+        "constant.numeric",
+        "constant.language",
+        "variable.other.constant"
+      ],
       "settings": { "foreground": "#e08f68" }
     },
     {
       "name": "Tokyo Gogh Gold Types",
-      "scope": ["support.type", "support.class", "entity.name.type", "entity.name.class"],
+      "scope": [
+        "support.type",
+        "support.class",
+        "entity.name.type",
+        "entity.name.class"
+      ],
       "settings": { "foreground": "#dec76e" }
+    },
+    {
+      "name": "TypeScript Type Aliases and Explicit Types",
+      "scope": [
+        "entity.name.type.alias.ts",
+        "entity.name.type.ts",
+        "entity.name.type.interface.ts"
+      ],
+      "settings": {
+        "foreground": "#dec76e"
+      }
+    },
+    {
+      "name": "Reset TypeScript/JavaScript string interpolation expressions",
+      "scope": ["meta.template.expression"],
+      "settings": {
+        "foreground": "#c0caf5"
+      }
+    },
+    {
+      "name": "TypeScript Enum Members",
+      "scope": ["variable.other.enummember.ts"],
+      "settings": {
+        "foreground": "#e08f68"
+      }
     }
   ]
 }
