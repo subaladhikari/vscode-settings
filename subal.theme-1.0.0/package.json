@@ -1,0 +1,49 @@
+{
+  "name": "theme",
+  "displayName": "Theme",
+  "description": "A clean Visual Studio Code theme that celebrates the lights of Downtown Tokyo at night modified by subaladhikari01@gmail.com",
+  "version": "1.0.0",
+  "publisher": "subal",
+  "license": "MIT",
+  "keywords": [
+    "theme",
+    "contrast",
+    "dark",
+    "light",
+    "tokyo",
+    "clean"
+  ],
+  "icon": "icon.png",
+  "homepage": "https://github.com/subaladhikari/vscode-settings/subal.theme-1.0.0",
+  "repository": {
+    "url": "https://github.com/subaladhikari/vscode-settings/subal.theme-1.0.0",
+    "type": "git"
+  },
+  "bugs": {
+    "url": "https://github.com/subaladhikari/vscode-settings/issues"
+  },
+  "galleryBanner": {
+    "color": "#1f2335",
+    "theme": "dark"
+  },
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "categories": [
+    "Themes",
+    "Other"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Tokyo Night",
+        "uiTheme": "vs-dark",
+        "path": "./themes/tokyo-night.json"
+      }
+    ]
+  },
+	"scripts": {
+		"package": "vsce package",
+		"publish": "vsce publish"
+	}
+}
