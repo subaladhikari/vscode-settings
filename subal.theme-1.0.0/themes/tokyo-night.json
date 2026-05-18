@@ -31,8 +31,7 @@
     }
   },
   "colors": {
-    "activityBar.activeBackground": "#101014",
-    "activityBar.activeBorder": "#292e42",
+    "activityBar.activeBackground": "#20222c",
     "activityBar.background": "#16161e",
     "activityBar.border": "#292e42",
     "activityBar.foreground": "#bdc7f0",
