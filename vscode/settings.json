@@ -10,8 +10,8 @@
   "chat.notifyWindowOnResponseReceived": "off",
   "chat.viewSessions.orientation": "stacked",
   "chat.tips.enabled": false,
-  "chat.planAgent.defaultModel": "GPT-5 mini (copilot)",
-  "chat.exploreAgent.defaultModel": "GPT-5 mini (copilot)",
+  "chat.planAgent.defaultModel": "Raptor mini (Preview) (copilot)",
+  "chat.exploreAgent.defaultModel": "Raptor mini (Preview) (copilot)",
   "inlineChat.defaultModel": "Raptor mini (Preview) (copilot)",
   // CSS settings
   "css.validate": false,
@@ -83,61 +83,6 @@
   "editor.unicodeHighlight.invisibleCharacters": false,
   "editor.wordBasedSuggestions": "off",
   "editor.wordWrap": "on",
-  "editor.tokenColorCustomizations": {
-    "[Tokyo Night]": {
-      "textMateRules": [
-        {
-          "name": "Base comments (all comment types)",
-          "scope": [
-            "comment",
-            "comment.line",
-            "comment.block",
-            "comment.block.documentation",
-            "punctuation.definition.comment"
-          ],
-          "settings": {
-            "fontStyle": "italic",
-            "foreground": "#646E9C"
-          }
-        },
-        {
-          "name": "JSDoc / documentation types and keywords",
-          "scope": [
-            "comment.block.documentation storage.type.class",
-            "comment.block.documentation keyword",
-            "comment.block.documentation entity.name.type",
-            "storage.type.class.jsdoc",
-            "variable.other.jsdoc"
-          ],
-          "settings": {
-            "foreground": "#bb9af7"
-          }
-        },
-        {
-          "name": "JSDoc instance/type annotations",
-          "scope": [
-            "comment.block.documentation entity.name.type.instance",
-            "entity.name.type.instance.jsdoc"
-          ],
-          "settings": {
-            "foreground": "#73daca",
-            "fontStyle": "italic"
-          }
-        },
-        {
-          "name": "Control keywords (code, NOT comments)",
-          "scope": [
-            "keyword.control.conditional",
-            "keyword.control.switch",
-            "keyword.control.flow"
-          ],
-          "settings": {
-            "foreground": "#e0af68"
-          }
-        }
-      ]
-    }
-  },
   // Emmet settings
   "emmet.excludeLanguages": ["markdown"],
   "emmet.includeLanguages": {
@@ -243,7 +188,7 @@
   "html.format.wrapLineLength": 100,
   "html.validate.scripts": false,
   "html.validate.styles": false,
-  // Js/Ts settings
+  // JS/TS settings
   "js/ts.experimental.useTsgo": true,
   "js/ts.validate.enabled": false,
   "js/ts.preferences.quoteStyle": "single",
@@ -299,11 +244,6 @@
   // Workbench settings
   "workbench.browser.openLocalhostLinks": false,
   "workbench.colorTheme": "Tokyo Night",
-  "workbench.colorCustomizations": {
-    "[Tokyo Night]": {
-      "panelTitle.border": "#29355a",
-    },
-  },
   "workbench.editor.defaultBinaryEditor": "default",
   "workbench.editor.empty.hint": "hidden",
   "workbench.editor.enablePreviewFromQuickOpen": false,
@@ -322,6 +262,8 @@
   "workbench.tree.renderIndentGuides": "always",
 
   // --- Extension Settings ---
+  // Code Highlight settings
+  "color-highlight.markRuler": false,
   // Code Spell Checker
   "cSpell.enabled": false,
   // Editor config
@@ -368,6 +310,8 @@
   "package-json-upgrade.patchUpgradeColorOverwrite": "#22C55E",
   // Project Manager settings
   "projectManager.git.baseFolders": ["C:\\Users\\subal\\Code"],
+  // SVG Preview settings
+  "svgPreview.autoOpen": false,
   // Tailwind CSS
   "tailwindCSS.emmetCompletions": true,
   "tailwindCSS.includeLanguages": {
